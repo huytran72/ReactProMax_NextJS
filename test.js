@@ -12,3 +12,4 @@ const user = {
 // const address = user.address
 
 const { name, age, address } = user
+console.log(`Name: ${name}, Age: ${age}, Address: ${address}`)
