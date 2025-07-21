@@ -7,4 +7,8 @@ const user = {
   address: "Wonderland",
 }
 
+// const name = user.name
+// const age = user.age
+// const address = user.address
+
 const { name, age, address } = user
