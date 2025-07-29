@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg"
 import "./App.css"
 
 const MyFirstComponent = () => {
-  return <div></div>
+  return <div>My First Component</div>
 }
 
 function App() {
@@ -12,6 +12,8 @@ function App() {
 
   return (
     <>
+      <MyFirstComponent />
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
