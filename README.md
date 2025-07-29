@@ -1,1 +1,0 @@
-# ReactProMax_NextJS
