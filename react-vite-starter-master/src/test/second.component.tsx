@@ -1,6 +1,15 @@
 const SecondComponent = () => {
+  // Group 1
   const myName = "Hedy Lamarr"
   const myAge = 30
+
+  // Group 2
+  const info = {
+    name: "Hedy Lamarr",
+    age: 30,
+    occupation: "Actress and Inventor",
+    inventions: ["Frequency Hopping Spread Spectrum", "Traffic Light System"],
+  }
 
   // jsx syntax: html + js
   return (
