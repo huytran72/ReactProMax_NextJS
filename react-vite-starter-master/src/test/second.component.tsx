@@ -8,13 +8,12 @@ const SecondComponent = () => {
     name: "Hedy Lamarr",
     age: 30,
     occupation: "Actress and Inventor",
-    inventions: ["Frequency Hopping Spread Spectrum", "Traffic Light System"],
   }
 
   // jsx syntax: html + js
   return (
     <div>
-      <h1>Hello: {JSON.stringify(info)}</h1>
+      <h1 style={{ color: "blue" }}>Hello: {JSON.stringify(info)}</h1>
       {/* <img
         src="https://i.imgur.com/yXOvdOSs.jpg"
         alt="Hedy Lamarr"
