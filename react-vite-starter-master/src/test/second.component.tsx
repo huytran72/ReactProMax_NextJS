@@ -4,11 +4,11 @@ const SecondComponent = () => {
   return (
     <div>
       <h1>Hello: {myName}</h1>
-      <img
+      {/* <img
         src="https://i.imgur.com/yXOvdOSs.jpg"
         alt="Hedy Lamarr"
         className="photo"
-      />
+      /> */}
       <ul>
         <li>Invent new traffic lights </li>
         <li>Rehearse a movie scene </li>
