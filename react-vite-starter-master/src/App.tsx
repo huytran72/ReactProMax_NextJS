@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg"
 import viteLogo from "/vite.svg"
 import "./App.css"
 import SecondComponent from "./test/second.component"
-import InputTodo from "./todo/InputTodo"
+import InputTodo from "./todo/input.todo"
 
 const MyFirstComponent = () => {
   return <div>My First Component</div>
