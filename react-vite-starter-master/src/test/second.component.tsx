@@ -1,4 +1,5 @@
 const SecondComponent = () => {
+  const myName = "Hedy Lamarr"
   // jsx syntax: html + js
   return (
     <div>
