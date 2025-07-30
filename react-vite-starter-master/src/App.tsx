@@ -2,6 +2,7 @@ import { useState } from "react"
 import reactLogo from "./assets/react.svg"
 import viteLogo from "/vite.svg"
 import "./App.css"
+import SecondComponent from "./test/second.component"
 
 const MyFirstComponent = () => {
   return <div>My First Component</div>
