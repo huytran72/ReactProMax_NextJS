@@ -14,9 +14,7 @@ const SecondComponent = () => {
   // jsx syntax: html + js
   return (
     <div>
-      <h1>
-        Hello: {myName}, age: {myAge}
-      </h1>
+      <h1>Hello: {JSON.stringify(info)}</h1>
       {/* <img
         src="https://i.imgur.com/yXOvdOSs.jpg"
         alt="Hedy Lamarr"
