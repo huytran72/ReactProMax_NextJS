@@ -4,14 +4,14 @@ function App() {
   const name = "React Vite Starter"
   const age = 3
   const info = {
-    gender: "male"
-    address: "123 Main St"
+    gender: "male",
+    address: "123 Main St",
   }
 
   return (
     <>
       <div className="app"></div>
-      <InputTodo name={name} age={age} />
+      <InputTodo name={name} age={age} info={info} />
     </>
   )
 }
