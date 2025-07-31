@@ -1,9 +1,5 @@
 import InputTodo from "./todo/input.todo"
 
-const MyFirstComponent = () => {
-  return <div>My First Component</div>
-}
-
 function App() {
   return (
     <>
