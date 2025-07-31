@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="app"></div>
-      <InputTodo />
+      <InputTodo name={name} age={age} />
     </>
   )
 }
