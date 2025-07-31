@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="app"></div>
+      <div className="parent"></div>
       <InputTodo name={name} age={age} info={info} />
     </>
   )
