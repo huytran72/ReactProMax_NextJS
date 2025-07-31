@@ -7,7 +7,6 @@ const MyFirstComponent = () => {
 function App() {
   return (
     <>
-      <MyFirstComponent />
       <InputTodo />
 
       <div>
