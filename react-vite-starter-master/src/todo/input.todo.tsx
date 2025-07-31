@@ -1,4 +1,4 @@
-const InputTodo = () => {
+const InputTodo = (props) => {
   return (
     <div>
       <h2>Add a New Todo</h2>
