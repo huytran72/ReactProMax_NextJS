@@ -16,7 +16,10 @@ function App() {
 
       <ul>
         <li>Todo 1</li>
-        <br />
+        <li>Todo 2</li>
+        <li>Todo 3</li>
+        <li>Todo 4</li>
+        <li>Todo 5</li>
       </ul>
     </>
   )
