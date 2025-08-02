@@ -14,7 +14,6 @@ function App() {
     <>
       <div className="parent"></div>
       <InputTodo name={name} age={age} info={info} />
-      <InputTodo name={name} age={age} info={info} />
 
       <ul>
         {todos.map((item, index) => {
