@@ -17,7 +17,7 @@ function App() {
       <InputTodo name={name} age={age} info={info} />
 
       <ul>
-        {todos.map((item) => {
+        {todos.map((item, index) => {
           return <li>{item}</li>
         })}
       </ul>
