@@ -1,4 +1,4 @@
-const InputTodo = (props) => {
+const InputTodo = (props: { age: number }) => {
   return (
     <div>
       <div>age = {props.age}</div>
