@@ -7,6 +7,10 @@ interface IProps {
   }
 }
 
+const handleClick = () => {
+  alert("Todo saved!")
+}
+
 const InputTodo = (props: IProps) => {
   return (
     <div>
@@ -16,7 +20,7 @@ const InputTodo = (props: IProps) => {
       <input type="text" placeholder="Add a new todo" />
       <button
         onClick={() => {
-          alert("Todo saved!")
+          handleClick()
         }}
       >
         Save
