@@ -10,7 +10,8 @@ interface IProps {
 let count = 1
 
 const handleClick = () => {
-  alert("Todo saved!")
+  count += 1
+  console.log("Count updated:", count)
 }
 
 const InputTodo = (props: IProps) => {
