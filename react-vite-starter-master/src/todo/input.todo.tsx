@@ -1,7 +1,10 @@
 interface IProps {
   age: number
   name: string
-  info: string
+  info: {
+    gender: string
+    address: string
+  }
 }
 
 const InputTodo = (props: IProps) => {
