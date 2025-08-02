@@ -18,13 +18,7 @@ const InputTodo = (props: IProps) => {
       <div>name = {props.name}</div>
       <h2>Add a New Todo</h2>
       <input type="text" placeholder="Add a new todo" />
-      <button
-        onClick={() => {
-          handleClick()
-        }}
-      >
-        Save
-      </button>
+      <button onClick={() => handleClick()}>Save</button>
     </div>
   )
 }
