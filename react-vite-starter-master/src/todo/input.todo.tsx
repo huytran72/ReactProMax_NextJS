@@ -1,4 +1,8 @@
-const InputTodo = (props: { age: number }) => {
+interface IProps {
+  age: number
+}
+
+const InputTodo = (props: IProps) => {
   return (
     <div>
       <div>age = {props.age}</div>
