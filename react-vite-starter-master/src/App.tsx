@@ -8,6 +8,8 @@ function App() {
     address: "123 Main St",
   }
 
+  const todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"]
+
   return (
     <>
       <div className="parent"></div>
@@ -15,11 +17,7 @@ function App() {
       <InputTodo name={name} age={age} info={info} />
 
       <ul>
-        <li>Todo 1</li>
-        <li>Todo 2</li>
-        <li>Todo 3</li>
-        <li>Todo 4</li>
-        <li>Todo 5</li>
+        <li>{todos}</li>
       </ul>
     </>
   )
