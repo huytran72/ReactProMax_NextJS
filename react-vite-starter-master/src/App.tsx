@@ -18,7 +18,7 @@ function App() {
 
       <ul>
         {todos.map((item, index) => {
-          return <li>{item}</li>
+          return <li key={index}>{item}</li>
         })}
       </ul>
     </>
