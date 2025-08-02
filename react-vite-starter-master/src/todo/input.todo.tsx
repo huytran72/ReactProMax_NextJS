@@ -14,7 +14,13 @@ const InputTodo = (props: IProps) => {
       <div>name = {props.name}</div>
       <h2>Add a New Todo</h2>
       <input type="text" placeholder="Add a new todo" />
-      <button onClick={() => {}}>Save</button>
+      <button
+        onClick={() => {
+          alert("Todo saved!")
+        }}
+      >
+        Save
+      </button>
     </div>
   )
 }
