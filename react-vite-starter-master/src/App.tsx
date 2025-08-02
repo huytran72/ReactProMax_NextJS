@@ -13,6 +13,11 @@ function App() {
       <div className="parent"></div>
       <InputTodo name={name} age={age} info={info} />
       <InputTodo name={name} age={age} info={info} />
+
+      <div>
+        <span>Todo 1</span>
+        <br />
+      </div>
     </>
   )
 }
