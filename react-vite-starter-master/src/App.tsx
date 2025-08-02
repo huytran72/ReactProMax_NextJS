@@ -14,10 +14,10 @@ function App() {
       <InputTodo name={name} age={age} info={info} />
       <InputTodo name={name} age={age} info={info} />
 
-      <div>
-        <span>Todo 1</span>
+      <ul>
+        <li>Todo 1</li>
         <br />
-      </div>
+      </ul>
     </>
   )
 }
