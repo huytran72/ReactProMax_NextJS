@@ -11,6 +11,7 @@ const InputTodo = (props: IProps) => {
   return (
     <div>
       <div>age = {props.age}</div>
+      <div>name = {props.name}</div>
       <h2>Add a New Todo</h2>
       <input type="text" placeholder="Add a new todo" />
       <button>Add Todo</button>
