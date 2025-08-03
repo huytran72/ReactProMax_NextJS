@@ -35,9 +35,11 @@ const InputTodo = (props: IProps) => {
       />
       <button onClick={() => handleClick()}>Save</button>
       <br />
-      <ul>{listTodo.map((item, index) => {
-        return ()
-      })}</ul>
+      <ul>
+        {listTodo.map((item, index) => {
+          return <li key={index}>{item}</li>
+        })}
+      </ul>
     </div>
   )
 }
