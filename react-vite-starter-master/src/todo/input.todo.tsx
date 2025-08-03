@@ -20,6 +20,10 @@ const InputTodo = (props: IProps) => {
   ])
 
   const handleClick = () => {
+    if (!todo) {
+      alert("Please enter a todo item")
+      return
+    }
     setListTodo([...listTodo, todo])
     setTodo("") // Clear the input field after adding the todo
   }
