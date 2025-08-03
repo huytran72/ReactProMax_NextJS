@@ -7,6 +7,8 @@ interface IProps {
   }
 }
 
+const [fullName, setFullName] = useState("")
+
 const handleClick = () => {}
 
 const InputTodo = (props: IProps) => {
