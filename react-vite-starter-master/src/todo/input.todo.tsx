@@ -17,9 +17,7 @@ const InputTodo = (props: IProps) => {
   }
 
   return (
-    <div>
-      <div>age = {props.age}</div>
-      <div>name = {props.name}</div>
+    <div style={{ border: "1px solid black", padding: "10px", margin: "10px" }}>
       <h2>Add a New Todo</h2>
       <input
         type="text"
