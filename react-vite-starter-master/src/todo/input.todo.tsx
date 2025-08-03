@@ -28,6 +28,7 @@ const InputTodo = (props: IProps) => {
     <div style={{ border: "1px solid black", padding: "10px", margin: "10px" }}>
       <h2>Add a New Todo</h2>
       <input
+        value={todo}
         type="text"
         placeholder="Add a new todo"
         onChange={(event) => {
