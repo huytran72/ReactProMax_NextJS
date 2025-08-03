@@ -9,7 +9,7 @@ interface IProps {
   }
 }
 
-const [fullName, setFullName] = useState("Lammert Tran")
+const [fullName, setFullName] = useState("")
 
 const handleClick = () => {}
 
@@ -23,7 +23,7 @@ const InputTodo = (props: IProps) => {
         type="text"
         placeholder="Add a new todo"
         onChange={(event) => {
-          console.log(event.target.value)
+          setFullName(event.target.value)
         }}
       />
       <div>My todo is {fullName}</div>
