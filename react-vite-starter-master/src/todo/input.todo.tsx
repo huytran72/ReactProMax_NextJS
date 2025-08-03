@@ -11,7 +11,7 @@ interface IProps {
 
 const InputTodo = (props: IProps) => {
   const [todo, setTodo] = useState("")
-  const [listTdo, setListTodo] = useState([
+  const [listTodo, setListTodo] = useState([
     "todo 1",
     "todo 2",
     "todo 3",
@@ -34,6 +34,8 @@ const InputTodo = (props: IProps) => {
         }}
       />
       <button onClick={() => handleClick()}>Save</button>
+      <br />
+      <ul>{listTodo.map(() => {})}</ul>
     </div>
   )
 }
