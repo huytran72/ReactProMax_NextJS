@@ -7,10 +7,7 @@ interface IProps {
   }
 }
 
-const handleClick = () => {
-  count += 1
-  console.log("Count updated:", count)
-}
+const handleClick = () => {}
 
 const InputTodo = (props: IProps) => {
   return (
