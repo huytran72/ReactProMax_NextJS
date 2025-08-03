@@ -26,6 +26,7 @@ const InputTodo = (props: IProps) => {
           console.log(event.target.value)
         }}
       />
+      <div>My todo is {fullName}</div>
       <button onClick={() => handleClick()}>Save</button>
     </div>
   )
