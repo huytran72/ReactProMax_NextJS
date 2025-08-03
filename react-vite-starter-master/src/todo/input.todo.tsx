@@ -20,7 +20,7 @@ const InputTodo = (props: IProps) => {
   ])
 
   const handleClick = () => {
-    console.log("Button clicked", todo)
+    setListTodo([...listTodo, todo])
   }
 
   return (
