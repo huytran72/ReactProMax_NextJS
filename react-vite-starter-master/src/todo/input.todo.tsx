@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 interface IProps {
   age: number
   name: string
@@ -7,7 +9,7 @@ interface IProps {
   }
 }
 
-const [fullName, setFullName] = useState("")
+const [fullName, setFullName] = useState()
 
 const handleClick = () => {}
 
