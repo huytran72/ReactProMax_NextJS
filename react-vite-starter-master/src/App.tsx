@@ -15,11 +15,11 @@ function App() {
       <div className="parent"></div>
       <InputTodo name={name} age={age} info={info} />
 
-      <ul>
+      {/* <ul>
         {todos.map((item, index) => {
           return <li key={index}>{item}</li>
         })}
-      </ul>
+      </ul> */}
     </>
   )
 }
