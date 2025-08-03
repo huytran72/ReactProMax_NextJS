@@ -10,10 +10,11 @@ interface IProps {
 }
 
 const InputTodo = (props: IProps) => {
-  const [fullName, setFullName] = useState("")
   const [todo, setTodo] = useState("")
 
-  const handleClick = () => {}
+  const handleClick = () => {
+    console.log("Button clicked", todo)
+  }
 
   return (
     <div>
@@ -27,8 +28,7 @@ const InputTodo = (props: IProps) => {
           setTodo(event.target.value)
         }}
       />
-      <div>My todo is {fullName}</div>
-      <div>My age is {todo}</div>
+      <div>My todo is {todo}</div>
       <button onClick={() => handleClick()}>Save</button>
     </div>
   )
