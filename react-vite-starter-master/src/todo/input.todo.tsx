@@ -7,8 +7,6 @@ interface IProps {
   }
 }
 
-let count = 1
-
 const handleClick = () => {
   count += 1
   console.log("Count updated:", count)
@@ -17,7 +15,6 @@ const handleClick = () => {
 const InputTodo = (props: IProps) => {
   return (
     <div>
-      <div>new count = {count}</div>
       <div>age = {props.age}</div>
       <div>name = {props.name}</div>
       <h2>Add a New Todo</h2>
