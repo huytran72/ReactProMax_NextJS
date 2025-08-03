@@ -9,11 +9,11 @@ interface IProps {
   }
 }
 
-const [fullName, setFullName] = useState("")
-
-const handleClick = () => {}
-
 const InputTodo = (props: IProps) => {
+  const [fullName, setFullName] = useState("")
+
+  const handleClick = () => {}
+
   return (
     <div>
       <div>age = {props.age}</div>
