@@ -9,7 +9,7 @@ interface IProps {
   }
 }
 
-const [fullName, setFullName] = useState()
+const [fullName, setFullName] = useState("Lammert Tran")
 
 const handleClick = () => {}
 
