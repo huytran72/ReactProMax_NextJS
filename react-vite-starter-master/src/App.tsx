@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <div className="parent"></div>
-      <InputTodo name={name} age={age} info={info} />
+      <InputTodo name={name} age={age} info={info} testFunction={handleTest} />
 
       {/* <ul>
         {todos.map((item, index) => {
