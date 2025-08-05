@@ -20,6 +20,8 @@ const InputTodo = (props: IProps) => {
     "todo 5",
   ])
 
+  const { testFunction } = props
+
   const handleClick = () => {
     if (!todo) {
       alert("Please enter a todo item")
