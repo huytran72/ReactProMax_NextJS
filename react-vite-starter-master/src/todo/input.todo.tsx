@@ -23,7 +23,7 @@ const InputTodo = (props: IProps) => {
   const { testFunction } = props
 
   const handleClick = () => {
-    testFunction() // Call the test function passed from the parent component
+    testFunction(todo) // Call the test function passed from the parent component
     // if (!todo) {
     //   alert("Please enter a todo item")
     //   return
