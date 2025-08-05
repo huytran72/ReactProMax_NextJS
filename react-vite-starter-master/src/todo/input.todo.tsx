@@ -7,6 +7,7 @@ interface IProps {
     gender: string
     address: string
   }
+  testFunction: () => void
 }
 
 const InputTodo = (props: IProps) => {
