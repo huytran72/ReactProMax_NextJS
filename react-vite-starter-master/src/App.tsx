@@ -10,6 +10,8 @@ function App() {
 
   const todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"]
 
+  const handleTest = () => {}
+
   return (
     <>
       <div className="parent"></div>
