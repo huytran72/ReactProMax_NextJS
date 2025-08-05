@@ -7,7 +7,7 @@ interface IProps {
     gender: string
     address: string
   }
-  testFunction: (v: string) => void
+  testFunction: (value: string) => void
 }
 
 const InputTodo = (props: IProps) => {
