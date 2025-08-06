@@ -12,13 +12,7 @@ interface IProps {
 
 const InputTodo = (props: IProps) => {
   const [todo, setTodo] = useState("")
-  const [listTodo, setListTodo] = useState([
-    "todo 1",
-    "todo 2",
-    "todo 3",
-    "todo 4",
-    "todo 5",
-  ])
+  const [listTodo, setListTodo] = useState("")
 
   const { testFunction } = props
 
