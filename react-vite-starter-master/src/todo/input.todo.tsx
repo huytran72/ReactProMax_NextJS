@@ -15,7 +15,7 @@ interface IProps {
 const InputTodo = (props: IProps) => {
   const [todo, setTodo] = useState("")
 
-  const { testFunction } = props
+  const { testFunction, listTodo, setListTodo } = props
 
   const handleClick = () => {
     testFunction(todo) // Call the test function passed from the parent component
