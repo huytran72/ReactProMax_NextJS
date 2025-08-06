@@ -8,6 +8,8 @@ interface IProps {
     address: string
   }
   testFunction: (value: string) => void
+  listTodo: string[]
+  setListTodo: (list: string[]) => void
 }
 
 const InputTodo = (props: IProps) => {
