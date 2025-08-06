@@ -24,7 +24,14 @@ function App() {
   return (
     <>
       <div className="parent"></div>
-      <InputTodo name={name} age={age} info={info} testFunction={handleTest} />
+      <InputTodo
+        name={name}
+        age={age}
+        info={info}
+        testFunction={handleTest}
+        listTodo={listTodo}
+        setListTodo={setListTodo}
+      />
 
       {/* <ul>
         {todos.map((item, index) => {
