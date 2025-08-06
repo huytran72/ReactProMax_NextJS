@@ -8,7 +8,13 @@ function App() {
     address: "123 Main St",
   }
 
-  const todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"]
+  const [listTodo, setListTodo] = useState([
+    "todo 1",
+    "todo 2",
+    "todo 3",
+    "todo 4",
+    "todo 5",
+  ])
 
   const handleTest = (name: string) => {
     alert(`Test function called with name: ${name}`)
