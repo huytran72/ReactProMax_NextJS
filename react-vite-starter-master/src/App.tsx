@@ -33,11 +33,12 @@ function App() {
         setListTodo={setListTodo}
       />
 
-      {/* <ul>
-        {todos.map((item, index) => {
+      <br />
+      <ul>
+        {listTodo.map((item, index) => {
           return <li key={index}>{item}</li>
         })}
-      </ul> */}
+      </ul>
     </>
   )
 }
