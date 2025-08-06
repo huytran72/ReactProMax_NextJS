@@ -12,7 +12,6 @@ interface IProps {
 
 const InputTodo = (props: IProps) => {
   const [todo, setTodo] = useState("")
-  const [listTodo, setListTodo] = useState("")
 
   const { testFunction } = props
 
