@@ -23,6 +23,7 @@ function App() {
 
   return (
     <>
+      <div>count = {count}</div>
       <div className="parent"></div>
       <InputTodo
         name={name}
