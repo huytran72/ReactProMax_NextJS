@@ -17,6 +17,8 @@ function App() {
     "todo 5",
   ])
 
+  const [count, setCount] = useState("")
+
   const handleTest = (name: string) => {
     alert(`Test function called with name: ${name}`)
   }
