@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <div>count = {count}</div>
+      <button onClick={() => setCount(count + 1)}>Increase Count</button>
       <div className="parent"></div>
       <InputTodo
         name={name}
