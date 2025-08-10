@@ -4,20 +4,24 @@ import "../../styles/users.css"
 const UsersTable = () => {
   useEffect(() => {
     console.log("Check useEffect")
-    const getData = async () => {
-      const res = await fetch("http://localhost:8000/api/v1/auth/login", {
-        method: "POST",
-        body: JSON.stringify({
-            username: "hoidanit@gmail.com",
-            password: "123456",
-      })
-      const data = await res.json()
-      console.log("Data fetched:", data)
-    }
     getData()
   }, [])
 
-  console.log("Check render")
+  const getData = async () => {
+    const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+      method: "POST",
+      body: JSON.stringify({
+        username: "hoidanit@gmail.com",
+        password: "123456",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    const data = await res.json()
+    console.log("Data fetched:", data)
+  }
+
   return (
     <div>
       <h2>HTML Table</h2>
