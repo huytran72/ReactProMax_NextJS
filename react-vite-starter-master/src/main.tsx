@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/users",
-    element: <App />,
+    element: <div>Users Page</div>,
   },
 ])
 
