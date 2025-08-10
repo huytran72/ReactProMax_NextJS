@@ -11,7 +11,7 @@ const UsersTable = () => {
     const res = await fetch("http://localhost:8000/api/v1/auth/login", {
       method: "POST",
       body: JSON.stringify({
-        username: "hoidanit@gmail.com",
+        username: "admin@gmail.com",
         password: "123456",
       }),
       headers: {
