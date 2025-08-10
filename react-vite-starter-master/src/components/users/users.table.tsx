@@ -5,7 +5,11 @@ const UsersTable = () => {
   useEffect(() => {
     console.log("Check useEffect")
     const getData = async () => {
-      const res = await fetch("http://localhost:8000/api/v1/auth/login")
+      const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+        method: "POST",
+      })
+      const data = await res.json()
+      console.log("Data fetched:", data)
     }
   }, [])
 
