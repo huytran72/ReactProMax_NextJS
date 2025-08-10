@@ -25,6 +25,7 @@ const UsersTable = () => {
 
     const res1 = await fetch("http://localhost:8000/api/v1/users/all", {
       headers: {
+        Authorization: `Bearer ${access_token}`,
         "Content-Type": "application/json",
       },
     })
