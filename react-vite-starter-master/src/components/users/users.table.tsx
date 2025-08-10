@@ -11,6 +11,7 @@ const UsersTable = () => {
       const data = await res.json()
       console.log("Data fetched:", data)
     }
+    getData()
   }, [])
 
   console.log("Check render")
