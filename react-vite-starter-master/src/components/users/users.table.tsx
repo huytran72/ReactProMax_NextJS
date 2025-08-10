@@ -5,6 +5,8 @@ const UsersTable = () => {
   useEffect(() => {
     console.log("Check useEffect")
   }, [])
+
+  console.log("Check render")
   return (
     <div>
       <h2>HTML Table</h2>
