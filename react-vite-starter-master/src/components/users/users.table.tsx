@@ -4,6 +4,9 @@ import "../../styles/users.css"
 const UsersTable = () => {
   useEffect(() => {
     console.log("Check useEffect")
+    const getData = async () => {
+      const res = await fetch("http://localhost:8000/api/v1/auth/login")
+    }
   }, [])
 
   console.log("Check render")
