@@ -2,7 +2,9 @@ import { useEffect, useState } from "react"
 import "../../styles/users.css"
 
 const UsersTable = () => {
-  useEffect(() => {}, [])
+  useEffect(() => {
+    console.log("Check useEffect")
+  }, [])
   return (
     <div>
       <h2>HTML Table</h2>
