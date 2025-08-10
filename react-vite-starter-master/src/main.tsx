@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <div>Users Page</div>,
   },
   {
-    path: "/users",
-    element: <div>Users Page</div>,
+    path: "/tracks",
+    element: <div>Tracks Page</div>,
   },
 ])
 
