@@ -1,3 +1,5 @@
+import "../styles/users.css"
+
 const UsersTable = () => {
   return (
     <div>
