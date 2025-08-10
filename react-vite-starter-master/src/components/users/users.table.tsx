@@ -7,6 +7,9 @@ const UsersTable = () => {
     const getData = async () => {
       const res = await fetch("http://localhost:8000/api/v1/auth/login", {
         method: "POST",
+        body: JSON.stringify({
+            username: "hoidanit@gmail.com",
+            password: "123456",
       })
       const data = await res.json()
       console.log("Data fetched:", data)
