@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "../../styles/users.css"
 
 const UsersTable = () => {
+  const [users, setUsers] = useState([])
   useEffect(() => {
     getData()
   }, [])
