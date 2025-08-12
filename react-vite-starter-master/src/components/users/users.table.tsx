@@ -17,8 +17,8 @@ const UsersTable = () => {
         "Content-Type": "application/json",
       },
     })
-    const data = await res.json()
-    console.log("Check data:", data)
+    const d = await res.json()
+    console.log("Check data:", d.data.result)
   }
 
   return (
