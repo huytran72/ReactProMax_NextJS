@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import "../../styles/users.css"
 
 const UsersTable = () => {
-  const [users, setUsers] = useState([])
+  const [listUsers, setListUsers] = useState([])
   useEffect(() => {
     getData()
   }, [])
@@ -19,7 +19,9 @@ const UsersTable = () => {
     })
     const d = await res.json()
     console.log("Check data:", d.data.result)
+    setListUsers(d.data.result)
   }
+  console.log("List users:", listUsers)
 
   return (
     <div>
