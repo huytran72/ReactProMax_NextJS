@@ -36,11 +36,15 @@ const UsersTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-          </tr>
+          {listUsers.map((item, index) => 
+            return (
+                <tr key={index}>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+            )
+          )}    
         </tbody>
       </table>
     </div>
