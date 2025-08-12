@@ -35,7 +35,7 @@ const UsersTable = () => {
 
   return (
     <div>
-      <h2>HTML Table</h2>
+      <h2>Table Users</h2>
 
       <table>
         <tr>
