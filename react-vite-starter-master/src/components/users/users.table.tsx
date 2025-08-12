@@ -39,9 +39,9 @@ const UsersTable = () => {
 
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Role</th>
         </tr>
         <tr>
           <td>Alfreds Futterkiste</td>
