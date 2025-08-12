@@ -39,9 +39,12 @@ const UsersTable = () => {
 
       <table>
         <tbody>
-          <th>Email</th>
-          <th>Name</th>
-          <th>Role</th>
+          <thead>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Role</th>
+          </thead>
+
           <tr>
             <td>Magazzini Alimentari Riuniti</td>
             <td>Giovanni Rovelli</td>
