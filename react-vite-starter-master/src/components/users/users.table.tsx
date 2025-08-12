@@ -38,11 +38,13 @@ const UsersTable = () => {
       <h2>Table Users</h2>
 
       <table>
-        <tr>
-          <td>Magazzini Alimentari Riuniti</td>
-          <td>Giovanni Rovelli</td>
-          <td>Italy</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   )
