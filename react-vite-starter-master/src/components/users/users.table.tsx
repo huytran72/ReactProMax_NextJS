@@ -38,13 +38,14 @@ const UsersTable = () => {
       <h2>Table Users</h2>
 
       <table>
-        <tbody>
-          <thead>
+        <thead>
+          <tr>
             <th>Email</th>
             <th>Name</th>
             <th>Role</th>
-          </thead>
-
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>Magazzini Alimentari Riuniti</td>
             <td>Giovanni Rovelli</td>
