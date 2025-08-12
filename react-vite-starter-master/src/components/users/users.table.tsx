@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react"
 import "../../styles/users.css"
 
+interface Iusers {
+  email: string
+  name: string
+  role: string
+}
+
 const UsersTable = () => {
   const [listUsers, setListUsers] = useState([])
   useEffect(() => {
@@ -36,12 +42,12 @@ const UsersTable = () => {
           </tr>
         </thead>
         <tbody>
-          {listUsers.map((item, index) => {
+          {listUsers.map((item: Iusers, index) => {
             return (
               <tr key={index}>
-                <td>Magazzini Alimentari Riuniti</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
+                <td>{item.email}</td>
+                <td>{item.name}</td>
+                <td>{item.role}</td>
               </tr>
             )
           })}
