@@ -43,7 +43,7 @@ const UsersTable = () => {
           </tr>
         </thead>
         <tbody>
-          {listUsers.map((item: IUsers, index) => {
+          {listUsers.map((item: IUsers) => {
             return (
               <tr key={item._id}>
                 <td>{item.email}</td>
