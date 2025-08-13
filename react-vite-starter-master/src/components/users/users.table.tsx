@@ -32,7 +32,7 @@ const UsersTable = () => {
 
   return (
     <div>
-      <h2>Table Users</h2>
+      <h2>Table User</h2>
 
       <table>
         <thead>
