@@ -8,11 +8,7 @@ import {
   Link,
 } from "react-router-dom"
 import UsersPage from "./screens/users.page.tsx"
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons"
+import { FireOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons"
 import type { MenuProps } from "antd"
 import { Menu } from "antd"
 
@@ -25,7 +21,7 @@ const items: MenuItem[] = [
   {
     label: <Link to="/users">Manage Users</Link>,
     key: "users",
-    icon: <AppstoreOutlined />,
+    icon: <FireOutlined />,
   },
 ]
 
