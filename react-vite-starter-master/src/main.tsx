@@ -13,15 +13,14 @@ import { Menu } from "antd"
 
 const items: MenuItem[] = [
   {
-    label: "Navigation One",
-    key: "mail",
+    label: "Home",
+    key: "home",
     icon: <MailOutlined />,
   },
   {
-    label: "Navigation Two",
-    key: "app",
+    label: "Manage Users",
+    key: "users",
     icon: <AppstoreOutlined />,
-    disabled: true,
   },
 ]
 
