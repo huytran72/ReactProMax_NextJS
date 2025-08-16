@@ -7,10 +7,9 @@ import UsersPage from "./screens/users.page.tsx"
 const LayoutAdmin = () => {
   return (
     <div>
-      <header></header>
-      <h1>Admin Layout</h1>
+      <header>HEADER</header>
       <Outlet />
-      <footer></footer>
+      <footer>FOOTER</footer>
     </div>
   )
 }
