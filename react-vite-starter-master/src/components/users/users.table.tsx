@@ -62,7 +62,9 @@ const UsersTable = () => {
       >
         <h2>Table User</h2>
         <div>
-          <Button icon={<PlusOutlined />}>Add new</Button>
+          <Button icon={<PlusOutlined />} type="primary">
+            Add new
+          </Button>
         </div>
       </div>
 
