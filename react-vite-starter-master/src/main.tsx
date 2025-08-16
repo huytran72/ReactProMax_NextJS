@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
@@ -55,6 +55,24 @@ const items: MenuItem[] = [
     ),
   },
 ]
+
+const App: React.FC = () => {
+  const [current, setCurrent] = useState("mail")
+
+  const onClick: MenuProps["onClick"] = (e) => {
+    console.log("click ", e)
+    setCurrent(e.key)
+  }
+
+  return (
+    <Menu
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode="horizontal"
+      items={items}
+    />
+  )
+}
 
 const LayoutAdmin = () => {
   return (
