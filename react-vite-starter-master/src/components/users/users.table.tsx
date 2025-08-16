@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table } from "antd"
+import { Table, Button } from "antd"
 import type { TableProps } from "antd"
 
 interface IUsers {
@@ -61,7 +61,7 @@ const UsersTable = () => {
       >
         <h2>Table User</h2>
         <div>
-          <button>Add new</button>
+          <Button>Add new</Button>
         </div>
       </div>
 
