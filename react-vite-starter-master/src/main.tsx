@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     // element: <App />,
     element: <LayoutAdmin />,
     children: [
+      { index: true, element: <App /> },
       {
         path: "users",
         element: <UsersPage />,
