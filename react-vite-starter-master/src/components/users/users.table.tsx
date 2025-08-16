@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "../../styles/users.css"
+import { Table } from "antd"
 
 interface IUsers {
   email: string
