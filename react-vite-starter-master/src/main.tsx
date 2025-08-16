@@ -23,7 +23,7 @@ const items: MenuItem[] = [
     icon: <MailOutlined />,
   },
   {
-    label: "Manage Users",
+    label: <Link to="/users">Manage Users</Link>,
     key: "users",
     icon: <AppstoreOutlined />,
   },
