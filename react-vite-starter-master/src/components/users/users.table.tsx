@@ -32,6 +32,24 @@ const UsersTable = () => {
   }
   console.log("List users:", listUsers)
 
+  const columns: TableProps["columns"] = [
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Role",
+      dataIndex: "role",
+      key: "role",
+    },
+  ]
+
   return (
     <div>
       <h2>Table User</h2>
