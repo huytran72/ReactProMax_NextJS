@@ -16,12 +16,12 @@ const items: MenuItem[] = [
   {
     label: <Link to="/">Home</Link>,
     key: "home",
-    icon: <MailOutlined />,
+    icon: <FireOutlined />,
   },
   {
     label: <Link to="/users">Manage Users</Link>,
     key: "users",
-    icon: <FireOutlined />,
+    icon: <MailOutlined />,
   },
 ]
 
