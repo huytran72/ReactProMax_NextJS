@@ -52,7 +52,13 @@ const UsersTable = () => {
 
   return (
     <div>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <h2>Table User</h2>
         <div>
           <button>Add new</button>
