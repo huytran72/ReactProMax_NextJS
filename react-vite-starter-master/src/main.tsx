@@ -7,7 +7,8 @@ import UsersPage from "./screens/users.page.tsx"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    // element: <App />,
+    element: <div>Home Page</div>,
     children: [
       {
         path: "users",
