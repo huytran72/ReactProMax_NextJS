@@ -3,6 +3,13 @@ import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import UsersPage from "./screens/users.page.tsx"
+import {
+  AppstoreOutlined,
+  MailOutlined,
+  SettingOutlined,
+} from "@ant-design/icons"
+import type { MenuProps } from "antd"
+import { Menu } from "antd"
 
 const LayoutAdmin = () => {
   return (
