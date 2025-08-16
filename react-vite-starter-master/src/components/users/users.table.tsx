@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table, Button } from "antd"
+import { Table, Button, Modal } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
 
@@ -51,6 +51,20 @@ const UsersTable = () => {
     },
   ]
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const showModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+
+  const handleCancel = () => {
+    setIsModalOpen(false)
+  }
+
   return (
     <div>
       <div
@@ -70,26 +84,20 @@ const UsersTable = () => {
 
       <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      {/* <table>
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Name</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {listUsers.map((item: IUsers) => {
-            return (
-              <tr key={item._id}>
-                <td>{item.email}</td>
-                <td>{item.name}</td>
-                <td>{item.role}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table> */}
+      <Button type="primary" onClick={showModal}>
+        Open Modal
+      </Button>
+      <Modal
+        title="Basic Modal"
+        closable={{ "aria-label": "Custom Close Button" }}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   )
 }
