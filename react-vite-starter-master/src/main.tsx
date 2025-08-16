@@ -1,13 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import UsersPage from "./screens/users.page.tsx"
 
 const LayoutAdmin = () => {
   return (
     <div>
       <h1>Admin Layout</h1>
+      <Outlet />
     </div>
   )
 }
