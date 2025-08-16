@@ -56,7 +56,7 @@ const items: MenuItem[] = [
   },
 ]
 
-const App: React.FC = () => {
+const Header = () => {
   const [current, setCurrent] = useState("mail")
 
   const onClick: MenuProps["onClick"] = (e) => {
@@ -77,7 +77,7 @@ const App: React.FC = () => {
 const LayoutAdmin = () => {
   return (
     <div>
-      <header>HEADER</header>
+      <Header />
       <Outlet />
       <footer>FOOTER</footer>
     </div>
