@@ -18,7 +18,7 @@ import { Menu } from "antd"
 
 const items: MenuItem[] = [
   {
-    label: "Home",
+    label: <Link to="/">Home</Link>,
     key: "home",
     icon: <MailOutlined />,
   },
