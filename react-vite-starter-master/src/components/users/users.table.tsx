@@ -53,8 +53,9 @@ const UsersTable = () => {
   return (
     <div>
       <h2>Table User</h2>
+      <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>Email</th>
@@ -73,7 +74,7 @@ const UsersTable = () => {
             )
           })}
         </tbody>
-      </table>
+      </table> */}
     </div>
   )
 }
