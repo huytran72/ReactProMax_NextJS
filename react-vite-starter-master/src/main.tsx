@@ -47,7 +47,6 @@ const LayoutAdmin = () => {
     <div>
       <Header />
       <Outlet />
-      <footer>FOOTER</footer>
     </div>
   )
 }
@@ -55,7 +54,6 @@ const LayoutAdmin = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    // element: <App />,
     element: <LayoutAdmin />,
     children: [
       { index: true, element: <App /> },
