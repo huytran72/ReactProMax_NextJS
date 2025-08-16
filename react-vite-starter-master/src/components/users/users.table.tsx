@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 // import "../../styles/users.css"
 import { Table, Button } from "antd"
 import type { TableProps } from "antd"
+import { PlusOutlined } from "@ant-design/icons"
 
 interface IUsers {
   email: string
@@ -61,7 +62,7 @@ const UsersTable = () => {
       >
         <h2>Table User</h2>
         <div>
-          <Button>Add new</Button>
+          <Button icon={<PlusOutlined />}>Add new</Button>
         </div>
       </div>
 
