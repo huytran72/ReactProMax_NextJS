@@ -29,7 +29,6 @@ const Header = () => {
   const [current, setCurrent] = useState("home")
 
   const onClick: MenuProps["onClick"] = (e) => {
-    console.log("click ", e)
     setCurrent(e.key)
   }
 
