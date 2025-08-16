@@ -12,7 +12,7 @@ import { FireOutlined, TeamOutlined } from "@ant-design/icons"
 import type { MenuProps } from "antd"
 import { Menu } from "antd"
 
-const items: MenuItem[] = [
+const items: MenuProps["items"] = [
   {
     label: <Link to="/">Home</Link>,
     key: "home",
