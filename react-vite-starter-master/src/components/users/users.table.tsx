@@ -32,7 +32,7 @@ const UsersTable = () => {
   }
   console.log("List users:", listUsers)
 
-  const columns: TableProps["columns"] = [
+  const columns: TableProps<any>["columns"] = [
     {
       title: "Email",
       dataIndex: "email",
