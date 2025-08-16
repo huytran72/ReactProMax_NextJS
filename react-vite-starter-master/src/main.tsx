@@ -4,6 +4,14 @@ import App from "./App.tsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import UsersPage from "./screens/users.page.tsx"
 
+const LayoutAdmin = () => {
+  return (
+    <div>
+      <h1>Admin Layout</h1>
+    </div>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
