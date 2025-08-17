@@ -129,7 +129,7 @@ const UsersTable = () => {
         </div>
         <div>
           <label>Role:</label>
-          <Input />
+          <Input value={role} onChange={(e) => setRole(e.target.value)} />
         </div>
       </Modal>
     </div>
