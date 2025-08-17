@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table, Button, Modal, Input } from "antd"
+import { Table, Button, Modal, Input, notification } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
 import { get } from "http"
@@ -89,6 +89,10 @@ const UsersTable = () => {
       await getData()
     } else {
       //false
+      notification.error({
+        message: "Error",
+        description: d.message || "Failed to add user",
+      })
     }
     console.log("Response after adding user:", d)
   }
