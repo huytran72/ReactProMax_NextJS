@@ -121,7 +121,7 @@ const UsersTable = () => {
         </div>
         <div>
           <label>Gender:</label>
-          <Input />
+          <Input value={gender} onChange={(e) => setGender(e.target.value)} />
         </div>
         <div>
           <label>Address:</label>
