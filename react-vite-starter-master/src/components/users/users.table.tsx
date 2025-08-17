@@ -73,6 +73,14 @@ const UsersTable = () => {
     }
     console.log("Data to submit:", data)
     // setIsModalOpen(false)
+
+    const res = await fetch("http://localhost:8000/api/v1/users/all", {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        "Content-Type": "application/json",
+      },
+    })
+    const d = await res.json()
   }
 
   return (
