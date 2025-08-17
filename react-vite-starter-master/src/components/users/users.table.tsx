@@ -84,7 +84,7 @@ const UsersTable = () => {
 
       <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      <Button type="primary">Open Modal</Button>
+      {/* <Button type="primary">Open Modal</Button> */}
       <Modal
         title="Basic Modal"
         // closable={{ "aria-label": "Custom Close Button" }}
