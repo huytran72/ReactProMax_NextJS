@@ -110,7 +110,10 @@ const UsersTable = () => {
         </div>
         <div>
           <label>Password:</label>
-          <Input />
+          <Input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <div>
           <label>Age:</label>
