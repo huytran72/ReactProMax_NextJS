@@ -42,7 +42,6 @@ const UsersTable = () => {
     console.log("Check data:", d.data.result)
     setListUsers(d.data.result)
   }
-  console.log("List users:", listUsers)
 
   const columns: TableProps<IUsers>["columns"] = [
     {
