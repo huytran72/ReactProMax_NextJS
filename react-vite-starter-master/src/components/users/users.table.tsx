@@ -75,7 +75,8 @@ const UsersTable = () => {
       address,
       role,
     }
-    setIsModalOpen(false)
+    console.log("Data to submit:", data)
+    // setIsModalOpen(false)
   }
 
   const handleCancel = () => {
