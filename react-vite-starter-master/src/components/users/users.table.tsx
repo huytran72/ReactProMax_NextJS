@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Table, Button, Modal, Input } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
+import { get } from "http"
 
 interface IUsers {
   email: string
@@ -83,6 +84,12 @@ const UsersTable = () => {
       body: JSON.stringify({ ...data }),
     })
     const d = await res.json()
+    if (d.data) {
+      //sucess
+      await getData()
+    } else {
+      //false
+    }
     console.log("Response after adding user:", d)
   }
 
