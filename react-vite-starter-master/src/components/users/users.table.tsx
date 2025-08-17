@@ -102,7 +102,7 @@ const UsersTable = () => {
       >
         <div>
           <label>Name:</label>
-          <Input />
+          <Input value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div>
           <label>Email:</label>
