@@ -66,6 +66,15 @@ const UsersTable = () => {
   }
 
   const handleOk = () => {
+    const data = {
+      email,
+      name,
+      password,
+      age,
+      gender,
+      address,
+      role,
+    }
     setIsModalOpen(false)
   }
 
