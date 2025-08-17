@@ -87,10 +87,10 @@ const UsersTable = () => {
       {/* <Button type="primary">Open Modal</Button> */}
       <Modal
         title="Add New User"
-        // closable={{ "aria-label": "Custom Close Button" }}
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        maskClosable={false}
       >
         <div>
           <label>Name:</label>
