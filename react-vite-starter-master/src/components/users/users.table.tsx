@@ -105,8 +105,8 @@ const UsersTable = () => {
           <Input />
         </div>
         <div>
-          <label>Password:</label>
-          <Input.Password />
+          <label>Age:</label>
+          <Input />
         </div>
         <div>
           <label>Confirm Password:</label>
