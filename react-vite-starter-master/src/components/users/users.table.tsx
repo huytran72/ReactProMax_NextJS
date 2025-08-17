@@ -61,7 +61,7 @@ const UsersTable = () => {
     },
   ]
 
-  const handleOk = () => {
+  const handleOk = async () => {
     const data = {
       email,
       name,
