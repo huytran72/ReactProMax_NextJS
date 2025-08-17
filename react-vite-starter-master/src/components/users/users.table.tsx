@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table, Button, Modal } from "antd"
+import { Table, Button, Modal, Input } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
 
@@ -92,9 +92,13 @@ const UsersTable = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </Modal>
     </div>
   )
