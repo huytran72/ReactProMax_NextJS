@@ -83,6 +83,7 @@ const UsersTable = () => {
       body: JSON.stringify({ ...data }),
     })
     const d = await res.json()
+    console.log("Response after adding user:", d)
   }
 
   return (
