@@ -91,7 +91,7 @@ const UsersTable = () => {
       //false
       notification.error({
         message: "Error",
-        description: d.message || "Failed to add user",
+        description: JSON.stringify(d.message),
       })
     }
     console.log("Response after adding user:", d)
