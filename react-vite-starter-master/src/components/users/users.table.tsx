@@ -13,6 +13,7 @@ interface IUsers {
 
 const UsersTable = () => {
   const [listUsers, setListUsers] = useState([])
+
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -20,6 +21,8 @@ const UsersTable = () => {
   const [gender, setGender] = useState("")
   const [address, setAddress] = useState("")
   const [role, setRole] = useState("")
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     getData()
@@ -58,8 +61,6 @@ const UsersTable = () => {
       key: "role",
     },
   ]
-
-  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const showModal = () => {
     setIsModalOpen(true)
