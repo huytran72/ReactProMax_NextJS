@@ -109,8 +109,16 @@ const UsersTable = () => {
           <Input />
         </div>
         <div>
-          <label>Confirm Password:</label>
-          <Input.Password />
+          <label>Gender:</label>
+          <Input />
+        </div>
+        <div>
+          <label>Address:</label>
+          <Input />
+        </div>
+        <div>
+          <label>Role:</label>
+          <Input />
         </div>
       </Modal>
     </div>
