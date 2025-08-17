@@ -92,13 +92,26 @@ const UsersTable = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <label>Name:</label>
+          <Input />
+        </div>
+        <div>
+          <label>Email:</label>
+          <Input />
+        </div>
+        <div>
+          <label>Password:</label>
+          <Input />
+        </div>
+        <div>
+          <label>Password:</label>
+          <Input.Password />
+        </div>
+        <div>
+          <label>Confirm Password:</label>
+          <Input.Password />
+        </div>
       </Modal>
     </div>
   )
