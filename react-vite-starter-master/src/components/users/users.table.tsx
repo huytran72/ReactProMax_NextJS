@@ -13,6 +13,14 @@ interface IUsers {
 
 const UsersTable = () => {
   const [listUsers, setListUsers] = useState([])
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [age, setAge] = useState("")
+  const [gender, setGender] = useState("")
+  const [address, setAddress] = useState("")
+  const [role, setRole] = useState("")
+
   useEffect(() => {
     getData()
   }, [])
