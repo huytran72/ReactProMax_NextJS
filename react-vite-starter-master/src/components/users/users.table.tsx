@@ -86,7 +86,7 @@ const UsersTable = () => {
 
       {/* <Button type="primary">Open Modal</Button> */}
       <Modal
-        title="Basic Modal"
+        title="Add New User"
         // closable={{ "aria-label": "Custom Close Button" }}
         open={isModalOpen}
         onOk={handleOk}
