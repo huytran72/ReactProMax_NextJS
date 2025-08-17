@@ -106,7 +106,7 @@ const UsersTable = () => {
         </div>
         <div>
           <label>Email:</label>
-          <Input />
+          <Input value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div>
           <label>Password:</label>
