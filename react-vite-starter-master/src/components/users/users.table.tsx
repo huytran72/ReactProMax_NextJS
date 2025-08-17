@@ -62,10 +62,6 @@ const UsersTable = () => {
     },
   ]
 
-  const showModal = () => {
-    setIsModalOpen(true)
-  }
-
   const handleOk = () => {
     const data = {
       email,
@@ -80,10 +76,6 @@ const UsersTable = () => {
     // setIsModalOpen(false)
   }
 
-  const handleCancel = () => {
-    setIsModalOpen(false)
-  }
-
   return (
     <div>
       <div
@@ -95,7 +87,11 @@ const UsersTable = () => {
       >
         <h2>Table User</h2>
         <div>
-          <Button icon={<PlusOutlined />} type="primary" onClick={showModal}>
+          <Button
+            icon={<PlusOutlined />}
+            type="primary"
+            onClick={() => setIsModalOpen(true)}
+          >
             Add new
           </Button>
         </div>
@@ -108,7 +104,7 @@ const UsersTable = () => {
         title="Add New User"
         open={isModalOpen}
         onOk={handleOk}
-        onCancel={handleCancel}
+        onCancel={() => setIsModalOpen(false)}
         maskClosable={false}
       >
         <div>
