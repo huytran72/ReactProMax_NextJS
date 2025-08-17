@@ -80,7 +80,7 @@ const UsersTable = () => {
         Authorization: `Bearer ${access_token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data }),
     })
     const d = await res.json()
   }
