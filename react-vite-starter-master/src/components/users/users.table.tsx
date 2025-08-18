@@ -91,6 +91,7 @@ const UsersTable = () => {
         message: "Success",
         description: "User added successfully",
       })
+      setIsModalOpen(false)
     } else {
       //false
       notification.error({
