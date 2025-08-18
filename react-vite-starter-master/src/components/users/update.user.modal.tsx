@@ -4,12 +4,12 @@ import { Modal, Input, notification } from "antd"
 interface IProps {
   access_token: string
   getData: () => void
-  isCreateModalOpen: boolean
-  setIsCreateModalOpen: (v: boolean) => void
+  isUpdateModalOpen: boolean
+  setIsUpdateModalOpen: (v: boolean) => void
 }
 
 const UpdateUserModal = (props: IProps) => {
-  const { access_token, getData, isCreateModalOpen, setIsCreateModalOpen } =
+  const { access_token, getData, isUpdateModalOpen, setIsUpdateModalOpen } =
     props
 
   const [name, setName] = useState("")
@@ -31,7 +31,7 @@ const UpdateUserModal = (props: IProps) => {
       role,
     }
     console.log("Data to submit:", data)
-    // setIsCreateModalOpen(false)
+    // setIsUpdateModalOpen(false)
 
     const res = await fetch("http://localhost:8000/api/v1/users", {
       method: "POST",
@@ -60,7 +60,7 @@ const UpdateUserModal = (props: IProps) => {
   }
 
   const handleCloseCreateModal = () => {
-    setIsCreateModalOpen(false)
+    setIsUpdateModalOpen(false)
     setName("")
     setEmail("")
     setPassword("")
@@ -73,7 +73,7 @@ const UpdateUserModal = (props: IProps) => {
   return (
     <Modal
       title="Update A User"
-      open={isCreateModalOpen}
+      open={isUpdateModalOpen}
       onOk={handleOk}
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
