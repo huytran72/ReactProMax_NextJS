@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Table, Button, Modal, Input, notification } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
+import CreateUserModal from "./create.user.modal"
 // import { get } from "http"
 
 interface IUsers {
@@ -76,7 +77,12 @@ const UsersTable = () => {
 
       <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      <CreateUserModal access_token={access_token} getData={getData} />
+      <CreateUserModal
+        access_token={access_token}
+        getData={getData}
+        isCreateModalOpen={isCreateModalOpen}
+        setIsCreateModalOpen={setIsCreateModalOpen}
+      />
     </div>
   )
 }
