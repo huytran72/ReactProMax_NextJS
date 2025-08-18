@@ -1,12 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Modal, Input, notification } from "antd"
+import { IUsers } from "./users.table"
 
 interface IProps {
   access_token: string
   getData: () => void
   isUpdateModalOpen: boolean
   setIsUpdateModalOpen: (v: boolean) => void
-  dataUpdate: any
+  dataUpdate: IUsers | null
 }
 
 const UpdateUserModal = (props: IProps) => {
@@ -25,6 +26,18 @@ const UpdateUserModal = (props: IProps) => {
   const [gender, setGender] = useState("")
   const [address, setAddress] = useState("")
   const [role, setRole] = useState("")
+
+  useEffect(() => {
+    if (dataUpdate) {
+      setName(dataUpdate.name)
+      setEmail(dataUpdate.email)
+      setPassword(dataUpdate.password)
+      setAge(dataUpdate.age)
+      setGender(dataUpdate.gender)
+      setAddress(dataUpdate.address)
+      setRole(dataUpdate.role)
+    }
+  }, [dataUpdate])
 
   const handleOk = async () => {
     const data = {
