@@ -7,7 +7,7 @@ import CreateUserModal from "./create.user.modal"
 import UpdateUserModal from "./update.user.modal"
 // import { get } from "http"
 
-interface IUsers {
+export interface IUsers {
   email: string
   name: string
   role: string
