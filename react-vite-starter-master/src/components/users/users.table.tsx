@@ -76,7 +76,7 @@ const UsersTable = () => {
 
       <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      <CreateUserModal access_token={access_token} />
+      <CreateUserModal access_token={access_token} getData={getData} />
     </div>
   )
 }
