@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table, Button, notification } from "antd"
-import type { TableProps } from "antd"
+import { Table, Button, notification, Popconfirm, message } from "antd"
+import type { TableProps, PopconfirmProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
 import CreateUserModal from "./create.user.modal"
 import UpdateUserModal from "./update.user.modal"
@@ -51,6 +51,11 @@ const UsersTable = () => {
     setListUsers(d.data.result)
   }
 
+  const confirm: PopconfirmProps["onConfirm"] = (e) => {
+    console.log(e)
+    message.success("Click on Yes")
+  }
+
   const columns: TableProps<IUsers>["columns"] = [
     {
       title: "Name",
@@ -92,9 +97,17 @@ const UsersTable = () => {
               Edit
             </button>
 
-            <Button style={{ marginLeft: 20 }} danger>
-              Delete
-            </Button>
+            <Popconfirm
+              title="Delete the task"
+              description="Are you sure to delete this task?"
+              onConfirm={confirm}
+              okText="Yes"
+              cancelText="No"
+            >
+              <Button style={{ marginLeft: 20 }} danger>
+                Delete
+              </Button>
+            </Popconfirm>
           </div>
         )
       },
