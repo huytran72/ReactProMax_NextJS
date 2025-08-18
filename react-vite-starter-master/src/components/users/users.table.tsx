@@ -80,22 +80,30 @@ const UsersTable = () => {
     {
       title: "Actions",
       key: "actions",
-      render: (value, record) => (
-        return(
+      render: (value, record) => {
+        return (
           <div>
             <button
-          onClick={() => {
-            console.log("Check record: ", record)
-            setDataUpdate(record)
-            setIsUpdateModalOpen(true)
-          }}
-        >
-          Edit
-        </button>
+              onClick={() => {
+                setDataUpdate(record)
+                setIsUpdateModalOpen(true)
+              }}
+            >
+              Edit
+            </button>
+
+            <button
+              style={{ marginLeft: 20 }}
+              onClick={() => {
+                setDataUpdate(record)
+                setIsUpdateModalOpen(true)
+              }}
+            >
+              Delete
+            </button>
           </div>
         )
-        
-      ),
+      },
     },
   ]
 
