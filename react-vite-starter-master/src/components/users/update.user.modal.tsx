@@ -6,11 +6,17 @@ interface IProps {
   getData: () => void
   isUpdateModalOpen: boolean
   setIsUpdateModalOpen: (v: boolean) => void
+  dataUpdate: any
 }
 
 const UpdateUserModal = (props: IProps) => {
-  const { access_token, getData, isUpdateModalOpen, setIsUpdateModalOpen } =
-    props
+  const {
+    access_token,
+    getData,
+    isUpdateModalOpen,
+    setIsUpdateModalOpen,
+    dataUpdate,
+  } = props
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
