@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { Table, Button, Modal, Input, notification } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
-import { get } from "http"
+// import { get } from "http"
 
 interface IUsers {
   email: string
@@ -26,7 +26,7 @@ const UsersTable = () => {
   const access_token =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjg5Y2YwMzg5NWFhMWYwOWVjYThiODEzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJhZGRyZXNzIjoiVmlldE5hbSIsImlzVmVyaWZ5Ijp0cnVlLCJuYW1lIjoiSSdtIGFkbWluIiwidHlwZSI6IlNZU1RFTSIsInJvbGUiOiJBRE1JTiIsImdlbmRlciI6Ik1BTEUiLCJhZ2UiOjY5LCJpYXQiOjE3NTUxMTU2MzAsImV4cCI6MTg0MTUxNTYzMH0.Ch30O1_Sv6jOlvf2pH67NdzPqGSGJfIQdn8YpncV-s0"
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
 
   useEffect(() => {
     getData()
@@ -72,7 +72,7 @@ const UsersTable = () => {
       role,
     }
     console.log("Data to submit:", data)
-    // setIsModalOpen(false)
+    // setIsCreateModalOpen(false)
 
     const res = await fetch("http://localhost:8000/api/v1/users", {
       method: "POST",
@@ -90,7 +90,7 @@ const UsersTable = () => {
         message: "Success",
         description: "User added successfully",
       })
-      setIsModalOpen(false)
+      setIsCreateModalOpen(false)
     } else {
       //false
       notification.error({
@@ -101,7 +101,7 @@ const UsersTable = () => {
   }
 
   const handleCloseCreateModal = () => {
-    setIsModalOpen(false)
+    setIsCreateModalOpen(false)
     setName("")
     setEmail("")
     setPassword("")
@@ -125,7 +125,7 @@ const UsersTable = () => {
           <Button
             icon={<PlusOutlined />}
             type="primary"
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsCreateModalOpen(true)}
           >
             Add new
           </Button>
@@ -137,7 +137,7 @@ const UsersTable = () => {
       {/* <Button type="primary">Open Modal</Button> */}
       <Modal
         title="Add New User"
-        open={isModalOpen}
+        open={isCreateModalOpen}
         onOk={handleOk}
         onCancel={() => handleCloseCreateModal()}
         maskClosable={false}
