@@ -38,19 +38,42 @@ const UsersTable = () => {
 
   const columns: TableProps<IUsers>["columns"] = [
     {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
-    },
-    {
       title: "Name",
       dataIndex: "name",
       key: "name",
     },
     {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
       title: "Role",
       dataIndex: "role",
       key: "role",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      key: "age",
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Actions",
+      key: "actions",
+      render: (value, record) => (
+        <Button
+          onClick={() => {
+            console.log("Check record: ", record)
+          }}
+        >
+          Edit
+        </Button>
+      ),
     },
   ]
 
