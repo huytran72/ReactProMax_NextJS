@@ -5,7 +5,7 @@ interface IProps {
   access_token: string
   getData: () => void
   isCreateModalOpen: boolean
-  setIsCreateModalOpen: (isOpen: boolean) => void
+  setIsCreateModalOpen: (v: boolean) => void
 }
 
 const CreateUserModal = (props: IProps) => {
