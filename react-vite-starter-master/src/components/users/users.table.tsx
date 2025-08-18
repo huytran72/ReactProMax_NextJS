@@ -40,7 +40,6 @@ const UsersTable = () => {
       },
     })
     const d = await res.json()
-    console.log("Check data:", d.data.result)
     setListUsers(d.data.result)
   }
 
@@ -140,7 +139,7 @@ const UsersTable = () => {
         title="Add New User"
         open={isModalOpen}
         onOk={handleOk}
-        onCancel={() => setIsModalOpen(false)}
+        onCancel={() => handleCloseCreateModal()}
         maskClosable={false}
       >
         <div>
