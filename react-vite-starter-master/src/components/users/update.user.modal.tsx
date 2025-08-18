@@ -42,42 +42,42 @@ const UpdateUserModal = (props: IProps) => {
   }, [dataUpdate])
 
   const handleOk = async () => {
-    const data = {
-      _id: dataUpdate?._id,
-      email,
-      name,
-      password,
-      age,
-      gender,
-      address,
-      role,
-    }
-    console.log("Data to submit:", data)
-    // setIsUpdateModalOpen(false)
+    if (dataUpdate) {
+      const data = {
+        _id: dataUpdate._id,
+        email,
+        name,
+        password,
+        age,
+        gender,
+        address,
+        role,
+      }
 
-    const res = await fetch("http://localhost:8000/api/v1/users", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...data }),
-    })
-    const d = await res.json()
-    if (d.data) {
-      //sucess
-      await getData()
-      notification.success({
-        message: "Success",
-        description: "User added successfully",
+      const res = await fetch("http://localhost:8000/api/v1/users", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data }),
       })
-      setIsUpdateModalOpen(false)
-    } else {
-      //false
-      notification.error({
-        message: "Errors",
-        description: JSON.stringify(d.message),
-      })
+      const d = await res.json()
+      if (d.data) {
+        //sucess
+        await getData()
+        notification.success({
+          message: "Success",
+          description: "User added successfully",
+        })
+        setIsUpdateModalOpen(false)
+      } else {
+        //false
+        notification.error({
+          message: "Errors",
+          description: JSON.stringify(d.message),
+        })
+      }
     }
   }
 
@@ -112,7 +112,7 @@ const UpdateUserModal = (props: IProps) => {
       <div>
         <label>Password:</label>
         <Input
-          disabled={true}
+          //   disabled={true}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
