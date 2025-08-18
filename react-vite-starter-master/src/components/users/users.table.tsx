@@ -92,15 +92,7 @@ const UsersTable = () => {
               Edit
             </button>
 
-            <button
-              style={{ marginLeft: 20 }}
-              onClick={() => {
-                setDataUpdate(record)
-                setIsUpdateModalOpen(true)
-              }}
-            >
-              Delete
-            </button>
+            <Button danger>Delete</Button>
           </div>
         )
       },
