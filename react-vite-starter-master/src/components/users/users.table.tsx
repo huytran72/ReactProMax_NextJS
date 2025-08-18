@@ -124,7 +124,7 @@ const UsersTable = () => {
         isUpdateModalOpen={isUpdateModalOpen}
         setIsUpdateModalOpen={setIsUpdateModalOpen}
         dataUpdate={dataUpdate}
-        // setDataUpdate={setDataUpdate}
+        setDataUpdate={setDataUpdate}
       />
     </div>
   )
