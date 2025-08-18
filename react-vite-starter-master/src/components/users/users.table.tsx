@@ -92,7 +92,9 @@ const UsersTable = () => {
               Edit
             </button>
 
-            <Button danger>Delete</Button>
+            <Button style={{ marginLeft: 20 }} danger>
+              Delete
+            </Button>
           </div>
         )
       },
