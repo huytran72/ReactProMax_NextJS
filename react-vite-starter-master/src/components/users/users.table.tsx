@@ -15,14 +15,6 @@ interface IUsers {
 const UsersTable = () => {
   const [listUsers, setListUsers] = useState([])
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [age, setAge] = useState("")
-  const [gender, setGender] = useState("")
-  const [address, setAddress] = useState("")
-  const [role, setRole] = useState("")
-
   const access_token =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjg5Y2YwMzg5NWFhMWYwOWVjYThiODEzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJhZGRyZXNzIjoiVmlldE5hbSIsImlzVmVyaWZ5Ijp0cnVlLCJuYW1lIjoiSSdtIGFkbWluIiwidHlwZSI6IlNZU1RFTSIsInJvbGUiOiJBRE1JTiIsImdlbmRlciI6Ik1BTEUiLCJhZ2UiOjY5LCJpYXQiOjE3NTUxMTU2MzAsImV4cCI6MTg0MTUxNTYzMH0.Ch30O1_Sv6jOlvf2pH67NdzPqGSGJfIQdn8YpncV-s0"
 
@@ -61,56 +53,6 @@ const UsersTable = () => {
     },
   ]
 
-  const handleOk = async () => {
-    const data = {
-      email,
-      name,
-      password,
-      age,
-      gender,
-      address,
-      role,
-    }
-    console.log("Data to submit:", data)
-    // setIsCreateModalOpen(false)
-
-    const res = await fetch("http://localhost:8000/api/v1/users", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...data }),
-    })
-    const d = await res.json()
-    if (d.data) {
-      //sucess
-      await getData()
-      notification.success({
-        message: "Success",
-        description: "User added successfully",
-      })
-      setIsCreateModalOpen(false)
-    } else {
-      //false
-      notification.error({
-        message: "Errors",
-        description: JSON.stringify(d.message),
-      })
-    }
-  }
-
-  const handleCloseCreateModal = () => {
-    setIsCreateModalOpen(false)
-    setName("")
-    setEmail("")
-    setPassword("")
-    setAge("")
-    setGender("")
-    setAddress("")
-    setRole("")
-  }
-
   return (
     <div>
       <div
@@ -134,46 +76,7 @@ const UsersTable = () => {
 
       <Table columns={columns} dataSource={listUsers} rowKey="_id" />
 
-      {/* <Button type="primary">Open Modal</Button> */}
-      <Modal
-        title="Add New User"
-        open={isCreateModalOpen}
-        onOk={handleOk}
-        onCancel={() => handleCloseCreateModal()}
-        maskClosable={false}
-      >
-        <div>
-          <label>Name:</label>
-          <Input value={name} onChange={(e) => setName(e.target.value)} />
-        </div>
-        <div>
-          <label>Email:</label>
-          <Input value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Password:</label>
-          <Input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Age:</label>
-          <Input value={age} onChange={(e) => setAge(e.target.value)} />
-        </div>
-        <div>
-          <label>Gender:</label>
-          <Input value={gender} onChange={(e) => setGender(e.target.value)} />
-        </div>
-        <div>
-          <label>Address:</label>
-          <Input value={address} onChange={(e) => setAddress(e.target.value)} />
-        </div>
-        <div>
-          <label>Role:</label>
-          <Input value={role} onChange={(e) => setRole(e.target.value)} />
-        </div>
-      </Modal>
+      <CreateUserModal access_token={access_token} />
     </div>
   )
 }
