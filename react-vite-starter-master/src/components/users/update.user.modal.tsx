@@ -110,7 +110,11 @@ const UpdateUserModal = (props: IProps) => {
       </div>
       <div>
         <label>Password:</label>
-        <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+        <Input
+          disabled={true}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </div>
       <div>
         <label>Age:</label>
