@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 // import "../../styles/users.css"
-import { Table, Button, Modal, Input, notification } from "antd"
+import { Table, Button } from "antd"
 import type { TableProps } from "antd"
 import { PlusOutlined } from "@ant-design/icons"
 import CreateUserModal from "./create.user.modal"
+import UpdateUserModal from "./update.user.modal"
 // import { get } from "http"
 
 interface IUsers {
@@ -16,10 +17,12 @@ interface IUsers {
 const UsersTable = () => {
   const [listUsers, setListUsers] = useState([])
 
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
+
+  const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false)
+
   const access_token =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjg5Y2YwMzg5NWFhMWYwOWVjYThiODEzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJhZGRyZXNzIjoiVmlldE5hbSIsImlzVmVyaWZ5Ijp0cnVlLCJuYW1lIjoiSSdtIGFkbWluIiwidHlwZSI6IlNZU1RFTSIsInJvbGUiOiJBRE1JTiIsImdlbmRlciI6Ik1BTEUiLCJhZ2UiOjY5LCJpYXQiOjE3NTUxMTU2MzAsImV4cCI6MTg0MTUxNTYzMH0.Ch30O1_Sv6jOlvf2pH67NdzPqGSGJfIQdn8YpncV-s0"
-
-  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
 
   useEffect(() => {
     getData()
@@ -69,6 +72,7 @@ const UsersTable = () => {
         <Button
           onClick={() => {
             console.log("Check record: ", record)
+            setIsUpdateModalOpen(true)
           }}
         >
           Edit
@@ -105,6 +109,13 @@ const UsersTable = () => {
         getData={getData}
         isCreateModalOpen={isCreateModalOpen}
         setIsCreateModalOpen={setIsCreateModalOpen}
+      />
+
+      <UpdateUserModal
+        access_token={access_token}
+        getData={getData}
+        isCreateModalOpen={isUpdateModalOpen}
+        setIsCreateModalOpen={setIsUpdateModalOpen}
       />
     </div>
   )
