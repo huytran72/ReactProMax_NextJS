@@ -101,6 +101,17 @@ const UsersTable = () => {
     }
   }
 
+  const handleCloseCreateModal = () => {
+    setIsModalOpen(false)
+    setName("")
+    setEmail("")
+    setPassword("")
+    setAge("")
+    setGender("")
+    setAddress("")
+    setRole("")
+  }
+
   return (
     <div>
       <div
