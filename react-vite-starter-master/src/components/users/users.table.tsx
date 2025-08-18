@@ -90,7 +90,7 @@ const UsersTable = () => {
     } else {
       //false
       notification.error({
-        message: "Error",
+        message: "Errors",
         description: JSON.stringify(d.message),
       })
     }
