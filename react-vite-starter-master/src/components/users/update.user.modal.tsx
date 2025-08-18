@@ -43,6 +43,7 @@ const UpdateUserModal = (props: IProps) => {
 
   const handleOk = async () => {
     const data = {
+      _id: dataUpdate?._id,
       email,
       name,
       password,
