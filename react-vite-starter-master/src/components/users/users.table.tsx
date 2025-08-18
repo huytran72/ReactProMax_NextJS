@@ -21,7 +21,7 @@ const UsersTable = () => {
 
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false)
 
-  const [dataUpdate, setDataUpdate] = useState(null)
+  const [dataUpdate, setDataUpdate] = useState<IUsers | null>(null)
 
   const access_token =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b2tlbiBsb2dpbiIsImlzcyI6ImZyb20gc2VydmVyIiwiX2lkIjoiNjg5Y2YwMzg5NWFhMWYwOWVjYThiODEzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJhZGRyZXNzIjoiVmlldE5hbSIsImlzVmVyaWZ5Ijp0cnVlLCJuYW1lIjoiSSdtIGFkbWluIiwidHlwZSI6IlNZU1RFTSIsInJvbGUiOiJBRE1JTiIsImdlbmRlciI6Ik1BTEUiLCJhZ2UiOjY5LCJpYXQiOjE3NTUxMTU2MzAsImV4cCI6MTg0MTUxNTYzMH0.Ch30O1_Sv6jOlvf2pH67NdzPqGSGJfIQdn8YpncV-s0"
@@ -74,6 +74,7 @@ const UsersTable = () => {
         <Button
           onClick={() => {
             console.log("Check record: ", record)
+            setDataUpdate(record)
             setIsUpdateModalOpen(true)
           }}
         >
