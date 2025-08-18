@@ -47,7 +47,6 @@ const UpdateUserModal = (props: IProps) => {
         _id: dataUpdate._id,
         email,
         name,
-        password,
         age,
         gender,
         address,
@@ -55,7 +54,7 @@ const UpdateUserModal = (props: IProps) => {
       }
 
       const res = await fetch("http://localhost:8000/api/v1/users", {
-        method: "POST",
+        method: "PATCH",
         headers: {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
@@ -70,7 +69,7 @@ const UpdateUserModal = (props: IProps) => {
           message: "Success",
           description: "User added successfully",
         })
-        setIsUpdateModalOpen(false)
+        handleCloseCreateModal()
       } else {
         //false
         notification.error({
@@ -112,7 +111,7 @@ const UpdateUserModal = (props: IProps) => {
       <div>
         <label>Password:</label>
         <Input
-          //   disabled={true}
+          disabled={true}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
