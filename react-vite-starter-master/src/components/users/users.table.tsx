@@ -12,10 +12,10 @@ export interface IUsers {
   name: string
   role: string
   _id: string
-  age: number
+  age: string
   gender: string
   address: string
-  password?: string
+  password: string
 }
 
 const UsersTable = () => {
