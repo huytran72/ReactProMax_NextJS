@@ -81,7 +81,9 @@ const UsersTable = () => {
       title: "Actions",
       key: "actions",
       render: (value, record) => (
-        <Button
+        return(
+          <div>
+            <button
           onClick={() => {
             console.log("Check record: ", record)
             setDataUpdate(record)
@@ -89,7 +91,10 @@ const UsersTable = () => {
           }}
         >
           Edit
-        </Button>
+        </button>
+          </div>
+        )
+        
       ),
     },
   ]
