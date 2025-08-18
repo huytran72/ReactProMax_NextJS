@@ -4,12 +4,12 @@ import { Modal, Input, notification } from "antd"
 interface IProps {
   access_token: string
   getData: () => void
-  isUpdateModalOpen: boolean
-  setIsUpdateModalOpen: (v: boolean) => void
+  isCreateModalOpen: boolean
+  setIsCreateModalOpen: (v: boolean) => void
 }
 
 const UpdateUserModal = (props: IProps) => {
-  const { access_token, getData, isUpdateModalOpen, setIsUpdateModalOpen } =
+  const { access_token, getData, isCreateModalOpen, setIsCreateModalOpen } =
     props
 
   const [name, setName] = useState("")
@@ -60,7 +60,7 @@ const UpdateUserModal = (props: IProps) => {
   }
 
   const handleCloseCreateModal = () => {
-    setIsUpdateModalOpen(false)
+    setIsCreateModalOpen(false)
     setName("")
     setEmail("")
     setPassword("")
@@ -72,8 +72,8 @@ const UpdateUserModal = (props: IProps) => {
 
   return (
     <Modal
-      title="Add New User"
-      open={isUpdateModalOpen}
+      title="Update A User"
+      open={isCreateModalOpen}
       onOk={handleOk}
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
