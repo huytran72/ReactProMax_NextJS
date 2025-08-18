@@ -94,7 +94,7 @@ const UsersTable = () => {
         description: JSON.stringify(d.message),
       })
     }
-    console.log("Response after adding user:", d)
+    setIsModalOpen(false)
   }
 
   return (
