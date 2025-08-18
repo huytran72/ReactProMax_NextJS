@@ -87,6 +87,10 @@ const UsersTable = () => {
     if (d.data) {
       //sucess
       await getData()
+      notification.success({
+        message: "Success",
+        description: "User added successfully",
+      })
     } else {
       //false
       notification.error({
