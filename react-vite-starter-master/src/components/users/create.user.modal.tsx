@@ -3,10 +3,11 @@ import { Modal, Input, notification } from "antd"
 
 interface IProps {
   access_token: string
+  getData: () => void
 }
 
 const CreateUserModal = (props: IProps) => {
-  const { access_token } = props
+  const { access_token, getData } = props
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
