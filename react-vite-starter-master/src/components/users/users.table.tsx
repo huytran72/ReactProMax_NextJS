@@ -98,7 +98,6 @@ const UsersTable = () => {
         description: JSON.stringify(d.message),
       })
     }
-    setIsModalOpen(false)
   }
 
   return (
