@@ -58,7 +58,12 @@ const UsersTable = () => {
       })
     }
     setListUsers(d.data.result)
-    setMeta({ current: 1, pageSize: 5, pages: 0, total: 0 })
+    setMeta({
+      current: d.data.meta.current,
+      pageSize: d.data.meta.pageSize,
+      pages: d.data.meta.pages,
+      total: d.data.meta.total,
+    })
   }
 
   const confirm = async (user: IUsers) => {
