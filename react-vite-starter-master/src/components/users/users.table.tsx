@@ -147,7 +147,7 @@ const UsersTable = () => {
     },
   ]
 
-  const handleOnchange = () => {}
+  const handleOnchange = (page, pageSize) => {}
 
   return (
     <div>
@@ -180,6 +180,7 @@ const UsersTable = () => {
           total: meta.total,
           showTotal: (total, range) =>
             `${range[0]}-${range[1]} of ${total} items`,
+          onChange: (page, pageSize) => handleOnchange(page, pageSize),
         }}
       />
 
