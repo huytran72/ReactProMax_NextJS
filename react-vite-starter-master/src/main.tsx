@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
 import {
@@ -44,6 +44,10 @@ const Header = () => {
 }
 
 const LayoutAdmin = () => {
+  useEffect(() => {
+    // Fetch initial data or perform setup
+  }, [])
+
   return (
     <div>
       <Header />
