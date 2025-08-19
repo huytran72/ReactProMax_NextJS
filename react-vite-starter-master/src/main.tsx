@@ -44,6 +44,23 @@ const Header = () => {
 }
 
 const LayoutAdmin = () => {
+  const getData = async () => {
+    const res = await fetch("http://localhost:8000/api/v1/users/all", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    const d = await res.json()
+    if (!d.data) {
+      notification.error({
+        message: "Error",
+        description: JSON.stringify(d.message),
+      })
+    }
+    setListUsers(d.data.result)
+  }
+
   useEffect(() => {
     localStorage.setItem("access_token", "Harry Tran")
   }, [])
