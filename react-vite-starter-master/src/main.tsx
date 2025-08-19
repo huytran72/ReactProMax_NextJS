@@ -51,7 +51,7 @@ const LayoutAdmin = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: "admin@gmail.com",
+        username: "hoidanit@gmail.com",
         password: "123456",
       }),
     })
