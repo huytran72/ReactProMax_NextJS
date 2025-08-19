@@ -147,7 +147,14 @@ const UsersTable = () => {
     },
   ]
 
-  const handleOnchange = (page, pageSize) => {}
+  const handleOnchange = (page: number, pageSize: number) => {
+    setMeta({
+      current: page,
+      pageSize: pageSize,
+      pages: meta.pages,
+      total: meta.total,
+    })
+  }
 
   return (
     <div>
