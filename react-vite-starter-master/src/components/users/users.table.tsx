@@ -166,7 +166,11 @@ const UsersTable = () => {
         columns={columns}
         dataSource={listUsers}
         rowKey="_id"
-        // pagination={false}
+        pagination={{
+          current: meta.current,
+          pageSize: meta.pageSize,
+          total: meta.total,
+        }}
       />
 
       <CreateUserModal
