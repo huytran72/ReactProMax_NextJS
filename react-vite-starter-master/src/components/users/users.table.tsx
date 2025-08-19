@@ -152,7 +152,12 @@ const UsersTable = () => {
         </div>
       </div>
 
-      <Table columns={columns} dataSource={listUsers} rowKey="_id" />
+      <Table
+        columns={columns}
+        dataSource={listUsers}
+        rowKey="_id"
+        pagination={false}
+      />
 
       <CreateUserModal
         access_token={access_token}
