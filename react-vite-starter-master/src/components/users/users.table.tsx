@@ -31,9 +31,9 @@ const UsersTable = () => {
 
   const [meta, setMeta] = useState({
     current: 1,
-    pageSize: 2,
-    pages: 5,
-    total: 10,
+    pageSize: 10,
+    pages: 0,
+    total: 0,
   })
 
   useEffect(() => {
