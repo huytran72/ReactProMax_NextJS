@@ -51,7 +51,15 @@ const UsersTable = () => {
     setListUsers(d.data.result)
   }
 
-  const confirm: PopconfirmProps["onConfirm"] = (e) => {
+  const confirm: async (user: IUsers) => {
+    const res = await fetch(`http://localhost:8000/api/v1/users/${user._id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        "Content-Type": "application/json",
+      },
+    })
+
     console.log(e)
     message.success("Click on Yes")
   }
