@@ -1,7 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import InputTodo from "./todo/input.todo"
 
 function App() {
+  useEffect(() => {
+    // Fetch initial data or perform setup
+  }, [])
+
   const name = "React Vite Starter"
   const age = 3
   const info = {
