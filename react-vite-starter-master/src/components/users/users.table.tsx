@@ -205,6 +205,7 @@ const UsersTable = () => {
           showTotal: (total, range) =>
             `${range[0]}-${range[1]} of ${total} items`,
           onChange: (page, pageSize) => handleOnchange(page, pageSize),
+          showSizeChanger: true,
         }}
       />
 
