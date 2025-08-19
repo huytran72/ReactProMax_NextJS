@@ -56,13 +56,9 @@ const LayoutAdmin = () => {
       }),
     })
     const d = await res.json()
-    if (!d.data) {
-      notification.error({
-        message: "Error",
-        description: JSON.stringify(d.message),
-      })
+    if (d.data) {
+      localStorage.setItem("access_token", d.data.access_token)
     }
-    setListUsers(d.data.result)
   }
 
   useEffect(() => {
