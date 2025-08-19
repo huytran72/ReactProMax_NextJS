@@ -65,6 +65,7 @@ const UsersTable = () => {
         message: "Success",
         description: JSON.stringify(d.message),
       })
+      await getData()
     } else {
       notification.error({
         message: "Error",
