@@ -58,6 +58,7 @@ const UsersTable = () => {
       })
     }
     setListUsers(d.data.result)
+    setMeta({ current: 1, pageSize: 5, pages: 0, total: 0 })
   }
 
   const confirm = async (user: IUsers) => {
@@ -169,7 +170,7 @@ const UsersTable = () => {
         pagination={{
           current: meta.current,
           pageSize: meta.pageSize,
-          total: 100,
+          total: meta.total,
         }}
       />
 
