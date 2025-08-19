@@ -62,7 +62,7 @@ const LayoutAdmin = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem("access_token", "Harry Tran")
+    getData()
   }, [])
 
   return (
