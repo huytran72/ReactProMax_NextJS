@@ -176,6 +176,8 @@ const UsersTable = () => {
           current: meta.current,
           pageSize: meta.pageSize,
           total: meta.total,
+          showTotal: (total, range) =>
+            `${range[0]}-${range[1]} of ${total} items`,
         }}
       />
 
