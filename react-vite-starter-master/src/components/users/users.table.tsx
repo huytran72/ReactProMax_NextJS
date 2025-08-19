@@ -169,7 +169,7 @@ const UsersTable = () => {
         pagination={{
           current: meta.current,
           pageSize: meta.pageSize,
-          total: meta.total,
+          total: 100,
         }}
       />
 
