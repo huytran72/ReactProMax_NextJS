@@ -31,7 +31,7 @@ const UsersTable = () => {
 
   const [meta, setMeta] = useState({
     current: 1,
-    pageSize: 10,
+    pageSize: 2,
     pages: 0,
     total: 0,
   })
@@ -166,7 +166,7 @@ const UsersTable = () => {
         columns={columns}
         dataSource={listUsers}
         rowKey="_id"
-        pagination={false}
+        // pagination={false}
       />
 
       <CreateUserModal
