@@ -50,6 +50,10 @@ const LayoutAdmin = () => {
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        username: "admin@gmail.com",
+        password: "123456",
+      }),
     })
     const d = await res.json()
     if (!d.data) {
