@@ -147,6 +147,8 @@ const UsersTable = () => {
     },
   ]
 
+  const handleOnchange = () => {}
+
   return (
     <div>
       <div
