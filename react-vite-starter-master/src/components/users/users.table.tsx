@@ -147,12 +147,35 @@ const UsersTable = () => {
     },
   ]
 
-  const handleOnchange = (page: number, pageSize: number) => {
+  const handleOnchange = async (page: number, pageSize: number) => {
     setMeta({
       current: page,
       pageSize: pageSize,
       pages: meta.pages,
       total: meta.total,
+    })
+    const res = await fetch(
+      `http://localhost:8000/api/v1/users?current=${page}&pageSize=${pageSize}`,
+      {
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    const d = await res.json()
+    if (!d.data) {
+      notification.error({
+        message: "Error",
+        description: JSON.stringify(d.message),
+      })
+    }
+    setListUsers(d.data.result)
+    setMeta({
+      current: d.data.meta.current,
+      pageSize: d.data.meta.pageSize,
+      pages: d.data.meta.pages,
+      total: d.data.meta.total,
     })
   }
 
