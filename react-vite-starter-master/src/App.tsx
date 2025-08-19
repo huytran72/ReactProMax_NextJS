@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import InputTodo from "./todo/input.todo"
 
 function App() {
-  useEffect(() => {
-    localStorage.setItem("access_token", "Harry Tran")
-  }, [])
-
   const name = "React Vite Starter"
   const age = 3
   const info = {
