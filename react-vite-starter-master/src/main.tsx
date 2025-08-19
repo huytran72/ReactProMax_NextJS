@@ -45,7 +45,7 @@ const Header = () => {
 
 const LayoutAdmin = () => {
   const getData = async () => {
-    const res = await fetch("http://localhost:8000/api/v1/users/all", {
+    const res = await fetch("http://localhost:8000/api/v1/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
