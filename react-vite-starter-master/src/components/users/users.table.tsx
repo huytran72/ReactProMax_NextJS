@@ -41,12 +41,15 @@ const UsersTable = () => {
   }, [])
 
   const getData = async () => {
-    const res = await fetch("http://localhost:8000/api/v1/users/all", {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        "Content-Type": "application/json",
-      },
-    })
+    const res = await fetch(
+      `http://localhost:8000/api/v1/users?current=${meta.current}&pageSize=${meta.pageSize}`,
+      {
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    )
     const d = await res.json()
     if (!d.data) {
       notification.error({
