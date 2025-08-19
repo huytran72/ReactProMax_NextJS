@@ -3,7 +3,7 @@ import InputTodo from "./todo/input.todo"
 
 function App() {
   useEffect(() => {
-    // Fetch initial data or perform setup
+    localStorage.setItem("access_token", "Harry Tran")
   }, [])
 
   const name = "React Vite Starter"
