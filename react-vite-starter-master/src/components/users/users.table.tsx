@@ -27,7 +27,7 @@ const UsersTable = () => {
 
   const [dataUpdate, setDataUpdate] = useState<IUsers | null>(null)
 
-  const access_token = localStorage.getItem("access_token")
+  const access_token = localStorage.getItem("access_token") as string
 
   useEffect(() => {
     getData()
