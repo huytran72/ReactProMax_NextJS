@@ -45,7 +45,7 @@ const Header = () => {
 
 const LayoutAdmin = () => {
   useEffect(() => {
-    // Fetch initial data or perform setup
+    localStorage.setItem("access_token", "Harry Tran")
   }, [])
 
   return (
