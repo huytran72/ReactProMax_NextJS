@@ -97,9 +97,9 @@ const CreateUserModal = (props: IProps) => {
       <Form name="basic" onFinish={onFinish} layout="vertical">
         <Form.Item
           style={{ marginBottom: 3 }}
-          label="Username"
-          name="username"
-          rules={[{ required: true, message: "Please input your username!" }]}
+          label="Name"
+          name="name"
+          rules={[{ required: true, message: "Please input your name!" }]}
         >
           <Input />
         </Form.Item>
