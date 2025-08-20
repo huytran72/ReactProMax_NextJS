@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { Modal, Input, notification, Form, Checkbox, Button } from "antd"
+import { Modal, Input, notification, Form, InputNumber } from "antd"
 import { IUsers } from "./users.table"
 import type { FormProps } from "antd"
 
@@ -105,22 +104,27 @@ const UpdateUserModal = (props: IProps) => {
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        autoComplete="off"
-        layout="vertical"
-      >
+      <Form name="basic" onFinish={onFinish} layout="vertical" form={form}>
         <Form.Item
-          label="Username"
-          name="username"
-          rules={[{ required: true, message: "Please input your username!" }]}
+          style={{ marginBottom: 3 }}
+          label="Name"
+          name="name"
+          rules={[{ required: true, message: "Please input your name!" }]}
         >
           <Input />
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
+          label="Email"
+          name="email"
+          rules={[{ required: true, message: "Please input your email!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          style={{ marginBottom: 3 }}
           label="Password"
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
@@ -128,48 +132,56 @@ const UpdateUserModal = (props: IProps) => {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item name="remember" valuePropName="checked" label={null}>
-          <Checkbox>Remember me</Checkbox>
+        <Form.Item
+          style={{ marginBottom: 3 }}
+          label="Age"
+          name="age"
+          rules={[{ required: true, message: "Please input your age!" }]}
+        >
+          <InputNumber style={{ width: "100%" }} />
         </Form.Item>
 
-        <Form.Item label={null}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
+        <Form.Item
+          style={{ marginBottom: 3 }}
+          label="Gender"
+          name="gender"
+          rules={[{ required: true, message: "Please input your gender!" }]}
+        >
+          <Select
+            placeholder="Select a option and change input text above"
+            // onChange={onGenderChange}
+            allowClear
+          >
+            <Option value="male">Male</Option>
+            <Option value="female">Female</Option>
+            <Option value="other">Other</Option>
+          </Select>
+        </Form.Item>
+
+        <Form.Item
+          style={{ marginBottom: 3 }}
+          label="Address"
+          name="address"
+          rules={[{ required: true, message: "Please input your address!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Role"
+          name="role"
+          rules={[{ required: true, message: "Please input your role!" }]}
+        >
+          <Select
+            placeholder="Select a role"
+            // onChange={onRoleChange}
+            allowClear
+          >
+            <Option value="user">User</Option>
+            <Option value="admin">Admin</Option>
+          </Select>
         </Form.Item>
       </Form>
-      {/* <div>
-        <label>Name:</label>
-        <Input value={name} onChange={(e) => setName(e.target.value)} />
-      </div>
-      <div>
-        <label>Email:</label>
-        <Input value={email} onChange={(e) => setEmail(e.target.value)} />
-      </div>
-      <div>
-        <label>Password:</label>
-        <Input
-          disabled={true}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Age:</label>
-        <Input value={age} onChange={(e) => setAge(e.target.value)} />
-      </div>
-      <div>
-        <label>Gender:</label>
-        <Input value={gender} onChange={(e) => setGender(e.target.value)} />
-      </div>
-      <div>
-        <label>Address:</label>
-        <Input value={address} onChange={(e) => setAddress(e.target.value)} />
-      </div>
-      <div>
-        <label>Role:</label>
-        <Input value={role} onChange={(e) => setRole(e.target.value)} />
-      </div> */}
     </Modal>
   )
 }
