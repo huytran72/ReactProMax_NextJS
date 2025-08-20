@@ -1,5 +1,13 @@
 import React, { useState } from "react"
-import { Modal, Input, notification, Button, Form, Checkbox } from "antd"
+import {
+  Modal,
+  Input,
+  notification,
+  Button,
+  Form,
+  Checkbox,
+  Select,
+} from "antd"
 import type { FormProps } from "antd"
 
 interface IProps {
@@ -75,6 +83,8 @@ const CreateUserModal = (props: IProps) => {
     console.log("Success:", values)
   }
 
+  const { Option } = Select
+
   return (
     <Modal
       title="Add New User"
@@ -121,7 +131,15 @@ const CreateUserModal = (props: IProps) => {
           name="gender"
           rules={[{ required: true, message: "Please input your gender!" }]}
         >
-          <Input />
+          <Select
+            placeholder="Select a option and change input text above"
+            // onChange={onGenderChange}
+            allowClear
+          >
+            <Option value="male">male</Option>
+            <Option value="female">female</Option>
+            <Option value="other">other</Option>
+          </Select>
         </Form.Item>
 
         <Form.Item
