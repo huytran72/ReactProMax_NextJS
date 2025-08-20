@@ -24,14 +24,6 @@ const UpdateUserModal = (props: IProps) => {
 
   const [form] = Form.useForm()
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [age, setAge] = useState("")
-  const [gender, setGender] = useState("")
-  const [address, setAddress] = useState("")
-  const [role, setRole] = useState("")
-
   useEffect(() => {
     if (dataUpdate) {
       form.setFieldsValue({
