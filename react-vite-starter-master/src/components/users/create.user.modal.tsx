@@ -136,9 +136,9 @@ const CreateUserModal = (props: IProps) => {
             // onChange={onGenderChange}
             allowClear
           >
-            <Option value="male">male</Option>
-            <Option value="female">female</Option>
-            <Option value="other">other</Option>
+            <Option value="male">Male</Option>
+            <Option value="female">Female</Option>
+            <Option value="other">Other</Option>
           </Select>
         </Form.Item>
 
