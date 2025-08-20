@@ -155,7 +155,14 @@ const CreateUserModal = (props: IProps) => {
           name="role"
           rules={[{ required: true, message: "Please input your role!" }]}
         >
-          <Input />
+          <Select
+            placeholder="Select a role"
+            // onChange={onRoleChange}
+            allowClear
+          >
+            <Option value="user">User</Option>
+            <Option value="admin">Admin</Option>
+          </Select>
         </Form.Item>
 
         <Form.Item name="remember" valuePropName="checked" label={null}>
