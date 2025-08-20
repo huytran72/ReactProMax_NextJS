@@ -23,27 +23,13 @@ const CreateUserModal = (props: IProps) => {
 
   const [form] = Form.useForm()
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [age, setAge] = useState("")
-  const [gender, setGender] = useState("")
-  const [address, setAddress] = useState("")
-  const [role, setRole] = useState("")
-
   const handleCloseCreateModal = () => {
     setIsCreateModalOpen(false)
-    setName("")
-    setEmail("")
-    setPassword("")
-    setAge("")
-    setGender("")
-    setAddress("")
-    setRole("")
   }
 
   const onFinish = async (values: FormProps["onFinish"]) => {
     console.log("Success:", values)
+    const { email, name, password, age, gender, address, role } = values
     const data = {
       email,
       name,
