@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Modal, Input, notification, Button, Form, Select, Space } from "antd"
+import { Modal, Input, notification, Button, Form, Checkbox } from "antd"
+import type { FormProps } from "antd"
 
 interface IProps {
   access_token: string
@@ -68,6 +69,10 @@ const CreateUserModal = (props: IProps) => {
     setGender("")
     setAddress("")
     setRole("")
+  }
+
+  const onFinish: FormProps["onFinish"] = (values) => {
+    console.log("Success:", values)
   }
 
   return (
