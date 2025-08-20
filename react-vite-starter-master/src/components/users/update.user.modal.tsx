@@ -37,7 +37,15 @@ const UpdateUserModal = (props: IProps) => {
     }
   }, [dataUpdate])
 
-  const handleOk = async () => {
+  const handleCloseCreateModal = () => {
+    setIsUpdateModalOpen(false)
+    form.resetFields()
+    setDataUpdate(null)
+  }
+
+  const onFinish = async (values: FormProps["onFinish"]) => {
+    const { email, name, age, gender, address, role } = values
+
     if (dataUpdate) {
       const data = {
         _id: dataUpdate._id,
@@ -48,7 +56,6 @@ const UpdateUserModal = (props: IProps) => {
         address,
         role,
       }
-
       const res = await fetch("http://localhost:8000/api/v1/users", {
         method: "PATCH",
         headers: {
@@ -63,7 +70,7 @@ const UpdateUserModal = (props: IProps) => {
         await getData()
         notification.success({
           message: "Success",
-          description: "User added successfully",
+          description: "User updated successfully",
         })
         handleCloseCreateModal()
       } else {
@@ -73,50 +80,6 @@ const UpdateUserModal = (props: IProps) => {
           description: JSON.stringify(d.message),
         })
       }
-    }
-  }
-
-  const handleCloseCreateModal = () => {
-    setIsUpdateModalOpen(false)
-    form.resetFields()
-    setDataUpdate(null)
-  }
-
-  const onFinish = async (values: FormProps["onFinish"]) => {
-    console.log("Success:", values)
-    const { email, name, password, age, gender, address, role } = values
-    const data = {
-      email,
-      name,
-      password,
-      age,
-      gender,
-      address,
-      role,
-    }
-    const res = await fetch("http://localhost:8000/api/v1/users", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-    const d = await res.json()
-    if (d.data) {
-      //sucess
-      await getData()
-      notification.success({
-        message: "Success",
-        description: "User added successfully",
-      })
-      setIsCreateModalOpen(false)
-    } else {
-      //false
-      notification.error({
-        message: "Errors",
-        description: JSON.stringify(d.message),
-      })
     }
   }
   const { Option } = Select
