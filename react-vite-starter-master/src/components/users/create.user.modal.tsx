@@ -31,7 +31,19 @@ const CreateUserModal = (props: IProps) => {
   const [address, setAddress] = useState("")
   const [role, setRole] = useState("")
 
-  const handleOk = async () => {
+  const handleCloseCreateModal = () => {
+    setIsCreateModalOpen(false)
+    setName("")
+    setEmail("")
+    setPassword("")
+    setAge("")
+    setGender("")
+    setAddress("")
+    setRole("")
+  }
+
+  const onFinish = async (values: FormProps["onFinish"]) => {
+    console.log("Success:", values)
     const data = {
       email,
       name,
@@ -41,9 +53,6 @@ const CreateUserModal = (props: IProps) => {
       address,
       role,
     }
-    console.log("Data to submit:", data)
-    // setIsCreateModalOpen(false)
-
     const res = await fetch("http://localhost:8000/api/v1/users", {
       method: "POST",
       headers: {
@@ -70,28 +79,13 @@ const CreateUserModal = (props: IProps) => {
     }
   }
 
-  const handleCloseCreateModal = () => {
-    setIsCreateModalOpen(false)
-    setName("")
-    setEmail("")
-    setPassword("")
-    setAge("")
-    setGender("")
-    setAddress("")
-    setRole("")
-  }
-
-  const onFinish: FormProps["onFinish"] = (values) => {
-    console.log("Success:", values)
-  }
-
   const { Option } = Select
 
   return (
     <Modal
       title="Add New User"
       open={isCreateModalOpen}
-      onOk={handleOk}
+      onOk={() => form.submit()}
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
@@ -172,17 +166,8 @@ const CreateUserModal = (props: IProps) => {
             <Option value="admin">Admin</Option>
           </Select>
         </Form.Item>
-
-        <Form.Item label={null}>
-          <Button
-            type="primary"
-            htmlType="submit"
-            onClick={() => form.submit()}
-          >
-            Submit
-          </Button>
-        </Form.Item>
       </Form>
+
       {/* <div>
         <label>Name:</label>
         <Input value={name} onChange={(e) => setName(e.target.value)} />
