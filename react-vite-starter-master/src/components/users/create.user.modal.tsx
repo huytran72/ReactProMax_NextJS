@@ -1,14 +1,5 @@
-import React, { useState } from "react"
-import {
-  Modal,
-  Input,
-  notification,
-  Button,
-  Form,
-  Select,
-  InputNumber,
-} from "antd"
-import type { FormProps } from "antd"
+// import React, { useState } from "react"
+import { Modal, Input, notification, Form, Select, InputNumber } from "antd"
 
 interface IProps {
   access_token: string
@@ -28,7 +19,7 @@ const CreateUserModal = (props: IProps) => {
     setIsCreateModalOpen(false)
   }
 
-  const onFinish = async (values: FormProps["onFinish"]) => {
+  const onFinish = async (values: any) => {
     console.log("Success:", values)
     const { email, name, password, age, gender, address, role } = values
     const data = {
