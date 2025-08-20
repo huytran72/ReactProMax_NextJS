@@ -81,9 +81,9 @@ const UpdateUserModal = (props: IProps) => {
     }
   }
 
-const onFinish: FormProps["onFinish"] = (values) => {
-  console.log("Success:", values)
-}
+  const onFinish: FormProps["onFinish"] = (values) => {
+    console.log("Success:", values)
+  }
 
   const handleCloseCreateModal = () => {
     setIsUpdateModalOpen(false)
@@ -96,24 +96,6 @@ const onFinish: FormProps["onFinish"] = (values) => {
     setAddress("")
     setRole("")
   }
-
-    const onFinish: FormProps["onFinish"] = (values) => {
-      console.log("Success:", values)
-    }
-
-  const onGenderChange = (value: string) => {
-    switch (value) {
-      case 'male':
-        form.setFieldsValue({ note: 'Hi, man!' });
-        break;
-      case 'female':
-        form.setFieldsValue({ note: 'Hi, lady!' });
-        break;
-      case 'other':
-        form.setFieldsValue({ note: 'Hi there!' });
-        break;
-      default:
-    }
 
   return (
     <Modal
