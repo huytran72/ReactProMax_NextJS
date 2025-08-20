@@ -93,11 +93,51 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          label="Email"
+          name="email"
+          rules={[{ required: true, message: "Please input your email!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
           label="Password"
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
         >
           <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+          label="Age"
+          name="age"
+          rules={[{ required: true, message: "Please input your age!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Gender"
+          name="gender"
+          rules={[{ required: true, message: "Please input your gender!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Address"
+          name="address"
+          rules={[{ required: true, message: "Please input your address!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Role"
+          name="role"
+          rules={[{ required: true, message: "Please input your role!" }]}
+        >
+          <Input />
         </Form.Item>
 
         <Form.Item name="remember" valuePropName="checked" label={null}>
