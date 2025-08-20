@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Modal, Input, notification, Form, InputNumber, Select } from "antd"
 import { IUsers } from "./users.table"
-import type { FormProps } from "antd"
 
 interface IProps {
   access_token: string
@@ -43,7 +42,7 @@ const UpdateUserModal = (props: IProps) => {
     setDataUpdate(null)
   }
 
-  const onFinish = async (values: FormProps["onFinish"]) => {
+  const onFinish = async (values: any) => {
     const { email, name, age, gender, address, role } = values
 
     if (dataUpdate) {
@@ -115,7 +114,7 @@ const UpdateUserModal = (props: IProps) => {
           style={{ marginBottom: 3 }}
           label="Password"
           name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
+          // rules={[{ required: true, message: "Please input your password!" }]}
         >
           <Input.Password disabled={dataUpdate ? true : false} />
         </Form.Item>
