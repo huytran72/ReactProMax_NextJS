@@ -24,6 +24,7 @@ const CreateUserModal = (props: IProps) => {
   const [form] = Form.useForm()
 
   const handleCloseCreateModal = () => {
+    form.resetFields()
     setIsCreateModalOpen(false)
   }
 
@@ -45,7 +46,7 @@ const CreateUserModal = (props: IProps) => {
         Authorization: `Bearer ${access_token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ...data }),
+      body: JSON.stringify(data),
     })
     const d = await res.json()
     if (d.data) {
