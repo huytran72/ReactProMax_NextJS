@@ -111,6 +111,11 @@ const UsersTable = () => {
       key: "age",
     },
     {
+      title: "Gender",
+      dataIndex: "gender",
+      key: "gender",
+    },
+    {
       title: "Address",
       dataIndex: "address",
       key: "address",
