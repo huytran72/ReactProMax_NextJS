@@ -78,7 +78,7 @@ const CreateUserModal = (props: IProps) => {
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
-      <div>
+      {/* <div>
         <label>Name:</label>
         <Input value={name} onChange={(e) => setName(e.target.value)} />
       </div>
@@ -105,7 +105,7 @@ const CreateUserModal = (props: IProps) => {
       <div>
         <label>Role:</label>
         <Input value={role} onChange={(e) => setRole(e.target.value)} />
-      </div>
+      </div> */}
     </Modal>
   )
 }
