@@ -5,7 +5,6 @@ import {
   notification,
   Button,
   Form,
-  Checkbox,
   Select,
   InputNumber,
 } from "antd"
@@ -21,6 +20,8 @@ interface IProps {
 const CreateUserModal = (props: IProps) => {
   const { access_token, getData, isCreateModalOpen, setIsCreateModalOpen } =
     props
+
+  const [form] = Form.useForm()
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -94,7 +95,7 @@ const CreateUserModal = (props: IProps) => {
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
-      <Form name="basic" onFinish={onFinish} layout="vertical">
+      <Form name="basic" onFinish={onFinish} layout="vertical" form={form}>
         <Form.Item
           style={{ marginBottom: 3 }}
           label="Name"
