@@ -7,6 +7,7 @@ import {
   Form,
   Checkbox,
   Select,
+  InputNumber,
 } from "antd"
 import type { FormProps } from "antd"
 
@@ -123,7 +124,7 @@ const CreateUserModal = (props: IProps) => {
           name="age"
           rules={[{ required: true, message: "Please input your age!" }]}
         >
-          <Input />
+          <InputNumber style={{ width: "100%" }} />
         </Form.Item>
 
         <Form.Item
@@ -163,10 +164,6 @@ const CreateUserModal = (props: IProps) => {
             <Option value="user">User</Option>
             <Option value="admin">Admin</Option>
           </Select>
-        </Form.Item>
-
-        <Form.Item name="remember" valuePropName="checked" label={null}>
-          <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
         <Form.Item label={null}>
