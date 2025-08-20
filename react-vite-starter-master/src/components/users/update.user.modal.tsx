@@ -88,7 +88,7 @@ const UpdateUserModal = (props: IProps) => {
     <Modal
       title="Update A User"
       open={isUpdateModalOpen}
-      onOk={handleOk}
+      onOk={() => form.submit()}
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
