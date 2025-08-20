@@ -96,6 +96,7 @@ const CreateUserModal = (props: IProps) => {
     >
       <Form name="basic" onFinish={onFinish} layout="vertical">
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Username"
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -104,6 +105,7 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Email"
           name="email"
           rules={[{ required: true, message: "Please input your email!" }]}
@@ -112,6 +114,7 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Password"
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
@@ -120,6 +123,7 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Age"
           name="age"
           rules={[{ required: true, message: "Please input your age!" }]}
@@ -128,6 +132,7 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Gender"
           name="gender"
           rules={[{ required: true, message: "Please input your gender!" }]}
@@ -144,6 +149,7 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 3 }}
           label="Address"
           name="address"
           rules={[{ required: true, message: "Please input your address!" }]}
