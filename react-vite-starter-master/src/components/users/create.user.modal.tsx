@@ -174,7 +174,11 @@ const CreateUserModal = (props: IProps) => {
         </Form.Item>
 
         <Form.Item label={null}>
-          <Button type="primary" htmlType="submit">
+          <Button
+            type="primary"
+            htmlType="submit"
+            onClick={() => form.submit()}
+          >
             Submit
           </Button>
         </Form.Item>
