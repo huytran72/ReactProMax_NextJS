@@ -79,6 +79,7 @@ const UpdateUserModal = (props: IProps) => {
   const handleCloseCreateModal = () => {
     setIsUpdateModalOpen(false)
     form.resetFields()
+    setDataUpdate(null)
   }
 
   const onFinish = async (values: FormProps["onFinish"]) => {
