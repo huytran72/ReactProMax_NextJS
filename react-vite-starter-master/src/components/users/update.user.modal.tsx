@@ -1,4 +1,5 @@
-import { Modal, Input, notification, Form, InputNumber } from "antd"
+import React, { useState, useEffect } from "react"
+import { Modal, Input, notification, Form, InputNumber, Select } from "antd"
 import { IUsers } from "./users.table"
 import type { FormProps } from "antd"
 
@@ -21,6 +22,8 @@ const UpdateUserModal = (props: IProps) => {
     setDataUpdate,
   } = props
 
+  const [form] = Form.useForm()
+
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -31,13 +34,14 @@ const UpdateUserModal = (props: IProps) => {
 
   useEffect(() => {
     if (dataUpdate) {
-      setName(dataUpdate.name)
-      setEmail(dataUpdate.email)
-      setPassword(dataUpdate.password)
-      setAge(dataUpdate.age)
-      setGender(dataUpdate.gender)
-      setAddress(dataUpdate.address)
-      setRole(dataUpdate.role)
+      form.setFieldsValue({
+        email: dataUpdate.email,
+        name: dataUpdate.name,
+        age: dataUpdate.age,
+        gender: dataUpdate.gender,
+        address: dataUpdate.address,
+        role: dataUpdate.role,
+      })
     }
   }, [dataUpdate])
 
@@ -80,10 +84,6 @@ const UpdateUserModal = (props: IProps) => {
     }
   }
 
-  const onFinish: FormProps["onFinish"] = (values) => {
-    console.log("Success:", values)
-  }
-
   const handleCloseCreateModal = () => {
     setIsUpdateModalOpen(false)
     setDataUpdate(null)
@@ -95,6 +95,45 @@ const UpdateUserModal = (props: IProps) => {
     setAddress("")
     setRole("")
   }
+
+  const onFinish = async (values: FormProps["onFinish"]) => {
+    console.log("Success:", values)
+    const { email, name, password, age, gender, address, role } = values
+    const data = {
+      email,
+      name,
+      password,
+      age,
+      gender,
+      address,
+      role,
+    }
+    const res = await fetch("http://localhost:8000/api/v1/users", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+    const d = await res.json()
+    if (d.data) {
+      //sucess
+      await getData()
+      notification.success({
+        message: "Success",
+        description: "User added successfully",
+      })
+      setIsCreateModalOpen(false)
+    } else {
+      //false
+      notification.error({
+        message: "Errors",
+        description: JSON.stringify(d.message),
+      })
+    }
+  }
+  const { Option } = Select
 
   return (
     <Modal
