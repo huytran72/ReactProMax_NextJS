@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Modal, Input, notification } from "antd"
+import { Modal, Input, notification, Form, Checkbox, Button } from "antd"
 import { IUsers } from "./users.table"
+import type { FormProps } from "antd"
 
 interface IProps {
   access_token: string
@@ -80,6 +81,10 @@ const UpdateUserModal = (props: IProps) => {
     }
   }
 
+const onFinish: FormProps["onFinish"] = (values) => {
+  console.log("Success:", values)
+}
+
   const handleCloseCreateModal = () => {
     setIsUpdateModalOpen(false)
     setDataUpdate(null)
@@ -92,6 +97,24 @@ const UpdateUserModal = (props: IProps) => {
     setRole("")
   }
 
+    const onFinish: FormProps["onFinish"] = (values) => {
+      console.log("Success:", values)
+    }
+
+  const onGenderChange = (value: string) => {
+    switch (value) {
+      case 'male':
+        form.setFieldsValue({ note: 'Hi, man!' });
+        break;
+      case 'female':
+        form.setFieldsValue({ note: 'Hi, lady!' });
+        break;
+      case 'other':
+        form.setFieldsValue({ note: 'Hi there!' });
+        break;
+      default:
+    }
+
   return (
     <Modal
       title="Update A User"
@@ -100,7 +123,40 @@ const UpdateUserModal = (props: IProps) => {
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
-      <div>
+      <Form
+        name="basic"
+        initialValues={{ remember: true }}
+        onFinish={onFinish}
+        autoComplete="off"
+        layout="vertical"
+      >
+        <Form.Item
+          label="Username"
+          name="username"
+          rules={[{ required: true, message: "Please input your username!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Password"
+          name="password"
+          rules={[{ required: true, message: "Please input your password!" }]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item name="remember" valuePropName="checked" label={null}>
+          <Checkbox>Remember me</Checkbox>
+        </Form.Item>
+
+        <Form.Item label={null}>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+      {/* <div>
         <label>Name:</label>
         <Input value={name} onChange={(e) => setName(e.target.value)} />
       </div>
@@ -131,7 +187,7 @@ const UpdateUserModal = (props: IProps) => {
       <div>
         <label>Role:</label>
         <Input value={role} onChange={(e) => setRole(e.target.value)} />
-      </div>
+      </div> */}
     </Modal>
   )
 }
