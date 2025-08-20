@@ -83,13 +83,7 @@ const CreateUserModal = (props: IProps) => {
       onCancel={() => handleCloseCreateModal()}
       maskClosable={false}
     >
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        autoComplete="off"
-        layout="vertical"
-      >
+      <Form name="basic" onFinish={onFinish} layout="vertical">
         <Form.Item
           label="Username"
           name="username"
