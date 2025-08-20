@@ -87,7 +87,7 @@ const CreateUserModal = (props: IProps) => {
         onFinish={onFinish}
         autoComplete="off"
       >
-        <Form.Item<FieldType>
+        <Form.Item
           label="Username"
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -95,7 +95,7 @@ const CreateUserModal = (props: IProps) => {
           <Input />
         </Form.Item>
 
-        <Form.Item<FieldType>
+        <Form.Item
           label="Password"
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
@@ -103,11 +103,7 @@ const CreateUserModal = (props: IProps) => {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item<FieldType>
-          name="remember"
-          valuePropName="checked"
-          label={null}
-        >
+        <Form.Item name="remember" valuePropName="checked" label={null}>
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
